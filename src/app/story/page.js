@@ -83,4 +83,89 @@ export default function Story() {
             About the name.
           </h2>
 
-          <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHe
+          <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            Fin was Mom and Dad&rsquo;s first baby &mdash; the dog they brought every one of
+            the kids home to. By the time Willow arrived he&rsquo;d already taken on the
+            role of senior household manager. She loved him fiercely her whole
+            life, the way he loved her &mdash; patiently, steadily, always nearby. He
+            passed peacefully this past spring, just shy of thirteen years old.
+          </p>
+
+          <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            Oak came along a few years after Fin and learned the job from him.
+            He&rsquo;s the easiest-going creature in the house &mdash; the dog who lives to
+            sunbathe on the deck, who lets the chaos happen around him, who has
+            never had a complicated day in his life. He&rsquo;s still on duty, mostly
+            by being present. We named the bakery for both of them because
+            they&rsquo;re the dogs who taught this family what a dog could be.
+          </p>
+
+          <h2 style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.75rem",
+            color: "var(--coastal-blue)",
+            fontWeight: 500,
+            marginTop: "3rem",
+            marginBottom: "1.25rem",
+          }}>
+            About Piper.
+          </h2>
+
+          <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            Piper came after the name was settled. She&rsquo;s the youngest, and a
+            study in contradictions &mdash; afraid of her own shadow most of the time,
+            but ready to take on the world the moment somebody looks sideways at
+            one of the kids. The whole farm loves her. The chickens, the cats,
+            every creature here has, at some point, curled up next to Piper.
+            (Except the geese. The geese don&rsquo;t like anyone.) She is Willow&rsquo;s
+            girl, through and through. Most of her best habits are Willow&rsquo;s.
+            Most of her worst habits are Willow&rsquo;s too.
+          </p>
+        </div>
+      </section>
+
+      {/* WHO WE ARE — three pillars */}
+      <section className="section section-warm">
+        <div className="container">
+          <div className="section-eyebrow">What this brand is about</div>
+          <h2 className="section-title">
+            Three things, <em>in this order.</em>
+          </h2>
+
+          <div className="pillars">
+            <div className="pillar">
+              <img src="/ears/ear-01.svg" alt="" className="pillar-ear" />
+              <h3>Real ingredients.</h3>
+              <p>Nothing weird, nothing we can&rsquo;t pronounce.</p>
+            </div>
+            <div className="pillar">
+              <img src="/ears/ear-07.svg" alt="" className="pillar-ear" />
+              <h3>Real people.</h3>
+              <p>Willow runs the show. The household runs the chaos.</p>
+            </div>
+            <div className="pillar">
+              <img src="/ears/ear-12.svg" alt="" className="pillar-ear" />
+              <h3>Real reasons.</h3>
+              <p>You already know.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SIGNATURE */}
+      <section className="section section-cream" style={{ textAlign: "center", paddingTop: "2rem" }}>
+        <div className="content">
+          <p style={{
+            fontFamily: "var(--font-script)",
+            fontSize: "2.75rem",
+            color: "var(--coastal-blue)",
+            lineHeight: 1,
+            fontFeatureSettings: '"liga" 1, "dlig" 1, "clig" 1',
+          }}>
+            &mdash; Willow &amp; Mom
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}
