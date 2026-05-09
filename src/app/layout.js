@@ -2,10 +2,9 @@ import "./globals.css";
 import { Playfair_Display, Lato } from "next/font/google";
 import Link from "next/link";
 
-// ---- Google Fonts: Playfair Display (display serif) + Lato (body sans) ----
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
   variable: "--font-display-loaded",
@@ -38,28 +37,60 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
       <body>
-        {/* Announcement bar */}
-        <div className="announcement">
+        {/* Subtle announcement bar — caramel on cream, very thin */}
+        <div style={{
+          background: "transparent",
+          padding: "0.65rem var(--gutter)",
+          fontSize: "0.7rem",
+          letterSpacing: "0.22em",
+          textTransform: "uppercase",
+          color: "var(--muted-ink)",
+          textAlign: "center",
+          borderBottom: "1px solid var(--tan-border)",
+        }}>
           Opening July 2026 · Annapolis Valley, Nova Scotia
         </div>
 
-        {/* Header with centered logo */}
-        <header className="header">
-          <Link href="/" className="header-logo" aria-label="Fin & Oak Bark Bakery — home">
-            <img src="/finoak-logo-knockout.png" alt="Fin & Oak Bark Bakery" />
-          </Link>
-        </header>
-
-        {/* Primary nav */}
-        <nav className="nav">
-          <div className="nav-inner">
-            <Link href="/">Home</Link>
-            <Link href="/treats">Treats</Link>
-            <Link href="/story">Our Story</Link>
-            <Link href="/journal">Journal</Link>
-            <Link href="/find-us">Find Us</Link>
+        {/* Header — logo centred, nav below in cream, with thin caramel rule */}
+        <header style={{
+          background: "var(--cream)",
+          paddingTop: "1.5rem",
+        }}>
+          {/* Centred logo */}
+          <div style={{ textAlign: "center", padding: "0 var(--gutter)" }}>
+            <Link href="/" style={{ display: "inline-block", maxWidth: "240px" }} aria-label="Fin & Oak Bark Bakery — home">
+              <img
+                src="/finoak-logo-knockout.png"
+                alt="Fin & Oak Bark Bakery"
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </Link>
           </div>
-        </nav>
+
+          {/* Nav directly below in cream, with caramel rule above */}
+          <nav style={{
+            background: "var(--cream)",
+            marginTop: "1.5rem",
+            borderTop: "1px solid var(--tan-border)",
+            borderBottom: "1px solid var(--tan-border)",
+          }}>
+            <div style={{
+              maxWidth: "1400px",
+              margin: "0 auto",
+              padding: "0 var(--gutter)",
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: 0,
+            }}>
+              <Link href="/" style={navLinkStyle}>Home</Link>
+              <Link href="/treats" style={navLinkStyle}>Treats</Link>
+              <Link href="/story" style={navLinkStyle}>Our Story</Link>
+              <Link href="/journal" style={navLinkStyle}>Journal</Link>
+              <Link href="/find-us" style={navLinkStyle}>Find Us</Link>
+            </div>
+          </nav>
+        </header>
 
         {/* Page content */}
         <main>{children}</main>
@@ -106,3 +137,14 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+const navLinkStyle = {
+  display: "block",
+  padding: "1rem 1.5rem",
+  fontSize: "0.78rem",
+  letterSpacing: "0.2em",
+  textTransform: "uppercase",
+  fontWeight: 400,
+  color: "var(--soft-ink)",
+  transition: "color 0.2s ease",
+};
