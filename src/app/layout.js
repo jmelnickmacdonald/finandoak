@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
       <body>
-        {/* Subtle announcement bar — caramel on cream, very thin */}
+        {/* Subtle announcement bar */}
         <div style={{
           background: "transparent",
           padding: "0.65rem var(--gutter)",
@@ -51,28 +51,30 @@ export default function RootLayout({ children }) {
           Opening July 2026 · Annapolis Valley, Nova Scotia
         </div>
 
-        {/* Header — logo centred, nav below in cream, with thin caramel rule */}
-        <header style={{
-          background: "var(--cream)",
-          paddingTop: "1.5rem",
-        }}>
+        {/* Header — logo on cream, dark nav directly below (no gap) */}
+        <header style={{ background: "var(--cream)" }}>
           {/* Centred logo */}
-          <div style={{ textAlign: "center", padding: "0 var(--gutter)" }}>
-            <Link href="/" style={{ display: "inline-block", maxWidth: "240px" }} aria-label="Fin & Oak Bark Bakery — home">
+          <div style={{
+            textAlign: "center",
+            padding: "1.5rem var(--gutter)",
+          }}>
+            <Link
+              href="/"
+              style={{ display: "inline-block", maxWidth: "260px" }}
+              aria-label="Fin & Oak Bark Bakery — home"
+            >
               <img
-                src="/finoak-logo-knockout.png"
+                src="/finandoakbarkbakeryfinal.png"
                 alt="Fin & Oak Bark Bakery"
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
             </Link>
           </div>
 
-          {/* Nav directly below in cream, with caramel rule above */}
+          {/* Dark nav — soft-ink, flush against the panorama below (no margin) */}
           <nav style={{
-            background: "var(--cream)",
-            marginTop: "1.5rem",
-            borderTop: "1px solid var(--tan-border)",
-            borderBottom: "1px solid var(--tan-border)",
+            background: "var(--soft-ink)",
+            marginBottom: 0,
           }}>
             <div style={{
               maxWidth: "1400px",
@@ -92,8 +94,8 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
 
-        {/* Page content */}
-        <main>{children}</main>
+        {/* Page content — no top margin so the nav flows directly into the photo */}
+        <main style={{ marginTop: 0 }}>{children}</main>
 
         {/* Footer */}
         <footer className="footer">
@@ -145,6 +147,6 @@ const navLinkStyle = {
   letterSpacing: "0.2em",
   textTransform: "uppercase",
   fontWeight: 400,
-  color: "var(--soft-ink)",
+  color: "var(--cream)",
   transition: "color 0.2s ease",
 };
