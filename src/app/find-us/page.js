@@ -1,221 +1,115 @@
-import Link from "next/link";
-
-export default function Home() {
+export default function FindUs() {
   return (
     <>
-      {/* ============ PANORAMA — full-width editorial band ============ */}
-      <section style={{ width: "100%", marginTop: "0.5rem" }}>
-        <img
-          src="/finandoakcollagehero.png"
-          alt="Fin and Oak — moments from the household"
-          style={{ width: "100%", height: "auto", display: "block" }}
-        />
-      </section>
-
-      {/* ============ HERO TYPE — sits below the panorama ============ */}
-      <section style={{
-        maxWidth: "1400px",
-        margin: "0 auto",
-        padding: "clamp(3rem, 6vw, 5rem) var(--gutter) clamp(4rem, 8vw, 6rem)",
-        textAlign: "center",
-      }}>
-        {/* Eyebrow with rules on both sides */}
-        <div style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "0.85rem",
-          fontSize: "0.72rem",
-          fontWeight: 700,
-          letterSpacing: "0.3em",
-          textTransform: "uppercase",
-          color: "var(--caramel)",
-          marginBottom: "1.5rem",
-        }}>
-          <span style={{ width: "36px", height: "1.5px", background: "var(--caramel)" }}></span>
-          Fin &amp; Oak Bark Bakery
-          <span style={{ width: "36px", height: "1.5px", background: "var(--caramel)" }}></span>
-        </div>
-
-        <h1 style={{
-          fontFamily: "var(--font-display)",
-          fontStyle: "italic",
-          fontWeight: 500,
-          fontSize: "clamp(2.75rem, 6.5vw, 5.5rem)",
-          lineHeight: 0.98,
-          color: "var(--soft-ink)",
-          letterSpacing: "-0.02em",
-          marginBottom: "1rem",
-          maxWidth: "18ch",
-          marginLeft: "auto",
-          marginRight: "auto",
-        }}>
-          Small batches. Big <span style={{ color: "var(--coastal-blue)" }}>messes.</span> Happy critters.
-        </h1>
-
-        <div style={{
-          fontFamily: "var(--font-script)",
-          fontFeatureSettings: '"liga" 1, "dlig" 1, "clig" 1',
-          fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)",
-          color: "var(--caramel)",
-          lineHeight: 1,
-          marginBottom: "2.5rem",
-        }}>
-          What&rsquo;s better than that?
-        </div>
-
-        <p style={{
-          fontSize: "1.05rem",
-          lineHeight: 1.65,
-          color: "var(--muted-ink)",
-          maxWidth: "38rem",
-          margin: "0 auto 2.25rem",
-        }}>
-          Handmade pet treats from a mom-and-daughter bakery in the heart of the
-          Annapolis Valley. Real ingredients. Spoiled regulars.
-        </p>
-
-        <div style={{
-          display: "inline-flex",
-          gap: "1.5rem",
-          alignItems: "center",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}>
-          <a href="#signup" style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.6rem",
-            padding: "1rem 1.75rem",
-            background: "var(--coastal-blue)",
-            color: "var(--cream)",
-            fontSize: "0.78rem",
-            fontWeight: 700,
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            borderRadius: "100px",
-            transition: "background 0.2s ease",
-          }}>
-            Tell me when →
-          </a>
-          <Link href="/story" style={{
-            fontSize: "0.78rem",
-            fontWeight: 700,
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            color: "var(--soft-ink)",
-            borderBottom: "1.5px solid var(--soft-ink)",
-            paddingBottom: "2px",
-          }}>
-            Read our story
-          </Link>
-        </div>
-      </section>
-
-      {/* ============ ABOUT — three pillars ============ */}
-      <section className="section section-warm">
+      {/* HERO */}
+      <section className="section section-cream" style={{ paddingTop: "5rem", paddingBottom: "3rem", textAlign: "center" }}>
         <div className="container">
-          <div className="section-eyebrow">What this brand is about</div>
-          <h2 className="section-title">
-            Three things, <em>in this order.</em>
-          </h2>
-
-          <div className="pillars">
-            <div className="pillar">
-              <img src="/ears/ear-01.svg" alt="" className="pillar-ear" />
-              <h3>Real ingredients.</h3>
-              <p>
-                Nothing weird, nothing we can&rsquo;t pronounce. Recipes built carefully
-                and thoughtfully.
-              </p>
-            </div>
-            <div className="pillar">
-              <img src="/ears/ear-07.svg" alt="" className="pillar-ear" />
-              <h3>Real people.</h3>
-              <p>
-                A mom-and-daughter operation. Willow runs the show. The household
-                runs the chaos.
-              </p>
-            </div>
-            <div className="pillar">
-              <img src="/ears/ear-12.svg" alt="" className="pillar-ear" />
-              <h3>Real reasons.</h3>
-              <p>
-                Most of our customers can&rsquo;t say thank you in words, and they
-                don&rsquo;t have to &mdash; you already know.
-              </p>
-            </div>
-          </div>
+          <div className="hero-eyebrow">Find Us</div>
+          <h1 className="section-title" style={{ fontSize: "clamp(2.5rem, 5.5vw, 3.5rem)", maxWidth: "22ch", margin: "0 auto" }}>
+            A small wooden stand <em>at the edge of the property.</em>
+          </h1>
         </div>
       </section>
 
-      {/* ============ STORY PREVIEW ============ */}
-      <section className="section section-cream">
+      {/* DIVIDER */}
+      <div className="rule-ear" aria-hidden="true">
+        <span></span>
+        <img src="/ears/ear-11.svg" alt="" />
+        <span></span>
+      </div>
+
+      {/* WHERE WE ARE */}
+      <section className="section section-cream" style={{ paddingTop: 0 }}>
         <div className="content">
-          <div className="section-eyebrow" style={{ textAlign: "left" }}>
-            Our Story
-          </div>
-          <h2 className="section-title" style={{ textAlign: "left" }}>
-            Most good ideas in this family <em>start at the kitchen counter.</em>
+          <h2 style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.75rem",
+            color: "var(--coastal-blue)",
+            fontWeight: 500,
+            marginBottom: "1.25rem",
+          }}>
+            Where we are.
           </h2>
-          <p style={{ fontSize: "1.05rem", lineHeight: 1.75, marginBottom: "1.25rem", color: "var(--soft-ink)" }}>
-            Mom and Willow have been talking about a pet treat business since
-            Willow was six. Five years of kitchen-counter conversations have a
-            way of becoming a plan.
+          <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            We bake out of the Annapolis Valley, Nova Scotia &mdash; in Meadowvale,
+            just down the road from Greenwood. Smack dab in the middle of apple
+            and farm country &mdash; the kind of place where you can drive five minutes
+            and pass half a dozen hay bales, a few barn cats, and some sheep
+            before you&rsquo;ll pass half as many humans. We bake from our small
+            kitchen and sell our treats from our little farm stand on the property.
           </p>
-          <p style={{ fontSize: "1.05rem", lineHeight: 1.75, marginBottom: "2rem", color: "var(--soft-ink)" }}>
-            Fin &amp; Oak Bark Bakery is officially Willow&rsquo;s gig. Mom is her
-            partner on the build. The household &mdash; three dogs, six cats, a whole
-            farmyard &mdash; supervises.
+
+          <h2 style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.75rem",
+            color: "var(--coastal-blue)",
+            fontWeight: 500,
+            marginTop: "3rem",
+            marginBottom: "1.25rem",
+          }}>
+            The farm stand.
+          </h2>
+          <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            A small wooden stand at the edge of the Raven House property, run on
+            the honour system when no one&rsquo;s there. Cream signage, hand-lettered
+            when possible. A small chalkboard for what&rsquo;s fresh that day.
           </p>
-          <Link href="/story" className="btn btn-outline">
-            Read the whole story
-          </Link>
+          <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            The farm stand isn&rsquo;t an outpost. It&rsquo;s the bakery.
+          </p>
+
+          <h2 style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.75rem",
+            color: "var(--coastal-blue)",
+            fontWeight: 500,
+            marginTop: "3rem",
+            marginBottom: "1.25rem",
+          }}>
+            Hours.
+          </h2>
+          <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            Opening July 2026. We&rsquo;ll post hours here closer to launch.
+          </p>
+
+          <h2 style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.75rem",
+            color: "var(--coastal-blue)",
+            fontWeight: 500,
+            marginTop: "3rem",
+            marginBottom: "1.25rem",
+          }}>
+            Get in touch.
+          </h2>
+          <p style={{ marginBottom: "0.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            For wholesale, custom orders, or just to say hello:
+          </p>
+          <p style={{ marginBottom: "2rem", fontSize: "1.1rem" }}>
+            <a href="mailto:hello@finoakbarkbakery.com" style={{ color: "var(--coastal-blue)", borderBottom: "1px solid var(--coastal-blue)" }}>
+              hello@finoakbarkbakery.com
+            </a>
+          </p>
         </div>
       </section>
 
-      {/* ============ TAGLINE BANNER ============ */}
-      <section className="section section-blue">
-        <div className="content" style={{ textAlign: "center" }}>
+      {/* TAGLINE BANNER */}
+      <section className="section section-blue" style={{ textAlign: "center" }}>
+        <div className="content">
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontStyle: "italic",
-            fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
+            fontSize: "clamp(1.75rem, 3.5vw, 2.25rem)",
             fontWeight: 500,
             lineHeight: 1.3,
             color: "var(--cream)",
-            marginBottom: "1.5rem",
+            marginBottom: "1rem",
           }}>
-            &ldquo;You said &lsquo;just one treat.&rsquo;<br />
-            We both know you&rsquo;re lying.&rdquo;
+            Small batches. Big messes. Happy critters.
           </h2>
-          <div style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "0.75rem",
-            letterSpacing: "0.28em",
-            textTransform: "uppercase",
-            color: "var(--caramel-light)",
-            fontWeight: 700,
-          }}>
-            For everyone with paws on the table
+          <div className="hero-script" style={{ color: "var(--caramel-light)", fontSize: "clamp(2rem, 4.5vw, 3rem)", marginBottom: 0 }}>
+            What&rsquo;s better than that?
           </div>
-        </div>
-      </section>
-
-      {/* ============ FIND US ============ */}
-      <section className="section section-cream">
-        <div className="container" style={{ textAlign: "center" }}>
-          <div className="section-eyebrow">Find Us</div>
-          <h2 className="section-title">
-            Baked in the <em>Raven House Kitchen.</em>
-          </h2>
-          <p className="section-lead">
-            We sell our treats from a little farm stand on the property
-            in Meadowvale, Nova Scotia &mdash; just down the road from Greenwood,
-            in the heart of the Annapolis Valley.
-          </p>
-          <Link href="/find-us" className="btn btn-primary">
-            Visit the farm stand
-          </Link>
         </div>
       </section>
     </>
