@@ -9,7 +9,7 @@
 /* Praise — the hand-script display font, special moments only */
 @font-face {
   font-family: 'Praise';
-  src: url('/fonts/Praise.woff2') format('woff2');
+  src: url('/fonts/Praise.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
