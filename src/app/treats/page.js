@@ -120,4 +120,14 @@ export default function Treats() {
           </h2>
           <p className="section-lead">
             Drop your email and you&rsquo;ll be among the first to hear when the bakery opens
-            in July 2026. No spam. We
+            in July 2026. No spam. We promise.
+          </p>
+          <div className="signup">
+            <input type="email" placeholder="your email, please" aria-label="Email address" />
+            <button className="btn btn-primary" type="button">Tell Me When</button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
