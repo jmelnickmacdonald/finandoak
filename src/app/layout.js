@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         {/* Header with centered logo */}
         <header className="header">
           <Link href="/" className="header-logo" aria-label="Fin & Oak Bark Bakery — home">
-            <img src="/finoak-logo.svg" alt="Fin & Oak Bark Bakery" />
+            <img src="/finoak-logo-knockout.png" alt="Fin & Oak Bark Bakery" />
           </Link>
         </header>
 
