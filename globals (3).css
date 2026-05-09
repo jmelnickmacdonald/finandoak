@@ -1,0 +1,515 @@
+/* ============================================
+   FIN & OAK BARK BAKERY — GLOBAL STYLES
+   ============================================
+   Brand tokens locked. Edit here, change everywhere.
+   ============================================ */
+
+/* ---------- FONTS ---------- */
+
+/* Praise — the hand-script display font, special moments only */
+@font-face {
+  font-family: 'Praise';
+  src: url('/fonts/Praise.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- BRAND TOKENS ---------- */
+:root {
+  /* Primary palette */
+  --coastal-blue: #074F6D;
+  --coastal-blue-dark: #053D55;
+  --coastal-blue-tint: #E8F2F7;
+
+  --caramel: #8B6F47;
+  --caramel-light: #B89870;
+
+  --soft-ink: #1A1A1A;
+  --muted-ink: #5C5046;
+
+  --cream: #FFFDF9;
+  --cream-warm: #F5F0E8;
+
+  --tan: #F1E9D6;
+  --tan-border: #E0D5BE;
+
+  /* Apple Leaf — the supporting sage */
+  --apple-leaf: #A6B088;
+  --apple-leaf-light: #C5CCB8;
+  --apple-leaf-dark: #8A957A;
+
+  /* Type system */
+  --font-script: 'Praise', cursive;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  /* Layout */
+  --max-width: 1200px;
+  --content-width: 720px;
+  --gutter: clamp(1.5rem, 4vw, 3rem);
+
+  /* OpenType ligatures — make sure Praise renders properly */
+  font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+}
+
+/* ---------- RESET ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--soft-ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* ---------- TYPOGRAPHY UTILITIES ---------- */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--caramel);
+}
+
+.script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+  line-height: 1;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- ANNOUNCEMENT BAR ---------- */
+.announcement {
+  background: var(--caramel);
+  color: var(--cream);
+  text-align: center;
+  padding: 0.5rem var(--gutter);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  background: var(--cream);
+  padding: 1.5rem var(--gutter) 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--tan-border);
+}
+
+.header-logo {
+  display: inline-block;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.header-logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  background: var(--soft-ink);
+  color: var(--cream);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--cream);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--caramel-light);
+}
+
+.nav a.active {
+  color: var(--caramel-light);
+}
+
+/* ---------- LAYOUT ---------- */
+.section {
+  padding: clamp(3rem, 8vw, 6rem) var(--gutter);
+}
+
+.section-cream { background: var(--cream); }
+.section-warm { background: var(--cream-warm); }
+.section-blue { background: var(--coastal-blue); color: var(--cream); }
+.section-ink { background: var(--soft-ink); color: var(--cream); }
+.section-sage { background: var(--apple-leaf); color: var(--soft-ink); }
+.section-tan { background: var(--tan); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  background: var(--cream);
+  padding: clamp(4rem, 10vw, 7rem) var(--gutter) clamp(3rem, 8vw, 5rem);
+  text-align: center;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  line-height: 1.15;
+  color: var(--soft-ink);
+  margin-bottom: 0.75rem;
+  max-width: 14ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-script {
+  font-family: var(--font-script);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  color: var(--coastal-blue);
+  line-height: 1;
+  margin-bottom: 2.5rem;
+  font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+}
+
+.hero-sub {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted-ink);
+  max-width: 38rem;
+  margin: 0 auto 2.5rem;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--coastal-blue);
+  color: var(--cream);
+}
+
+.btn-primary:hover {
+  background: var(--coastal-blue-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--coastal-blue);
+  border: 1.5px solid var(--coastal-blue);
+}
+
+.btn-outline:hover {
+  background: var(--coastal-blue);
+  color: var(--cream);
+}
+
+/* ---------- EMAIL FORM ---------- */
+.signup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.signup input[type="email"] {
+  flex: 1 1 220px;
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 1.5px solid var(--tan-border);
+  border-radius: 100px;
+  background: var(--cream);
+  color: var(--soft-ink);
+  transition: border-color 0.2s ease;
+}
+
+.signup input[type="email"]:focus {
+  outline: none;
+  border-color: var(--coastal-blue);
+}
+
+.signup input::placeholder {
+  color: var(--muted-ink);
+  opacity: 0.7;
+}
+
+/* ---------- SECTIONS ---------- */
+.section-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--soft-ink);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title em {
+  color: var(--coastal-blue);
+  font-style: italic;
+}
+
+.section-lead {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--muted-ink);
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+}
+
+/* ---------- DIVIDERS ---------- */
+.rule {
+  width: 60px;
+  height: 1px;
+  background: var(--caramel);
+  margin: 2rem auto;
+}
+
+.rule-ear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  gap: 0.75rem;
+}
+
+.rule-ear img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+}
+
+.rule-ear span {
+  width: 40px;
+  height: 1px;
+  background: var(--tan-border);
+}
+
+/* ---------- VALUES (3-pillar list) ---------- */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  max-width: 64rem;
+  margin: 3rem auto 0;
+}
+
+.pillar {
+  text-align: center;
+}
+
+.pillar-ear {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  opacity: 0.85;
+}
+
+.pillar h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--coastal-blue);
+  margin-bottom: 0.5rem;
+}
+
+.pillar p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--muted-ink);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: var(--soft-ink);
+  color: var(--cream);
+  padding: 4rem var(--gutter) 2rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.footer-script {
+  font-family: var(--font-script);
+  font-size: 2.25rem;
+  color: var(--caramel-light);
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
+}
+
+.footer-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--cream);
+  opacity: 0.85;
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  border-top: 1px solid rgba(245, 240, 232, 0.15);
+  border-bottom: 1px solid rgba(245, 240, 232, 0.15);
+  padding: 2.5rem 0;
+}
+
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--caramel-light);
+  margin-bottom: 1rem;
+}
+
+.footer-col a, .footer-col p {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--cream);
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: var(--caramel-light);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  opacity: 0.6;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .nav-inner { gap: 0; }
+  .nav a { padding: 0.85rem 1rem; font-size: 0.75rem; }
+  .header-logo { max-width: 220px; }
+}
