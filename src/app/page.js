@@ -8,7 +8,7 @@ export default function Home() {
         position: "relative",
         width: "100%",
         minHeight: "clamp(520px, 75vh, 780px)",
-        backgroundImage: "url('/finandoakhero.jpg')",
+        backgroundImage: "url('/fin-and-oak-hero.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundColor: "var(--soft-ink)",
