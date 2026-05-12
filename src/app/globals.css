@@ -378,9 +378,9 @@ button {
 }
 
 .rule-ear img {
-  width: 24px;
-  height: 24px;
-  opacity: 0.6;
+  width: 36px;
+  height: 36px;
+  opacity: 0.65;
 }
 
 .rule-ear span {
@@ -403,10 +403,10 @@ button {
 }
 
 .pillar-ear {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 1rem;
-  opacity: 0.85;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.25rem;
+  opacity: 0.9;
 }
 
 .pillar h3 {
