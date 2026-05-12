@@ -8,12 +8,12 @@ export default function Treats() {
         <div className="container">
           <div className="hero-eyebrow">Treats</div>
           <h1 className="section-title" style={{ fontSize: "clamp(2.5rem, 5vw, 3.25rem)", maxWidth: "20ch", margin: "0 auto 1rem" }}>
-            Real ingredients. <em>Spoiled regulars.</em>
+            Real ingredients.<br /><em>Spoiled regulars.</em>
           </h1>
           <p className="section-lead">
-            Small-batch treats for dogs and cats, made by hand, with ingredients we&rsquo;d
-            happily feed our own crew. Given the size of our crew, that&rsquo;s a higher
-            bar than it sounds.
+            Small-batch treats for dogs and cats, made by hand, with ingredients
+            we&rsquo;d happily feed our own crew. Given the size of our crew,
+            that&rsquo;s a higher bar than it sounds.
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export default function Treats() {
         <span></span>
       </div>
 
-      {/* CATEGORIES PREVIEW */}
+      {/* CATEGORIES */}
       <section className="section section-cream">
         <div className="container">
           <div className="section-eyebrow">What we make</div>
@@ -46,13 +46,16 @@ export default function Treats() {
               borderRadius: "8px",
               textAlign: "center",
             }}>
-              <img src="/ears/ear-02.svg" alt="" style={{ width: "48px", height: "48px", margin: "0 auto 1rem", opacity: 0.85 }} />
+              <img src="/ears/ear-02.svg" alt="" style={{ width: "72px", height: "72px", margin: "0 auto 1.25rem", opacity: 0.9 }} />
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
                 For Dogs
               </h3>
               <p style={{ color: "var(--muted-ink)", fontSize: "0.95rem" }}>
-                Biscuits, training treats, the everyday stuff &mdash; baked for dogs
-                whose people don&rsquo;t cut corners.
+                Biscuits, training treats, every time you pass them in the living
+                room and they stare at you with those sweet little puppy dogs
+                eyes... you know, the everyday stuff. (Only joking... like all
+                good things, in moderation of course.) Baked for dogs whose
+                humans don&rsquo;t cut corners.
               </p>
             </div>
 
@@ -62,12 +65,14 @@ export default function Treats() {
               borderRadius: "8px",
               textAlign: "center",
             }}>
-              <img src="/ears/ear-09.svg" alt="" style={{ width: "48px", height: "48px", margin: "0 auto 1rem", opacity: 0.85 }} />
+              <img src="/ears/ear-09.svg" alt="" style={{ width: "72px", height: "72px", margin: "0 auto 1.25rem", opacity: 0.9 }} />
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
                 For Cats
               </h3>
               <p style={{ color: "var(--muted-ink)", fontSize: "0.95rem" }}>
-                Yes, them too. Whether they admit they want them or not.
+                Yes, them too. Whether they admit they want them or not. These
+                are taking some time to refine because... cats. Before long,
+                though, they&rsquo;ll be gracing our shelves and page.
               </p>
             </div>
 
@@ -76,14 +81,15 @@ export default function Treats() {
               padding: "2.5rem 2rem",
               borderRadius: "8px",
               textAlign: "center",
-              opacity: 0.7,
+              opacity: 0.85,
             }}>
-              <img src="/ears/ear-14.svg" alt="" style={{ width: "48px", height: "48px", margin: "0 auto 1rem", opacity: 0.85 }} />
+              <img src="/ears/ear-14.svg" alt="" style={{ width: "72px", height: "72px", margin: "0 auto 1.25rem", opacity: 0.9 }} />
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
                 For Horses
               </h3>
               <p style={{ color: "var(--muted-ink)", fontSize: "0.95rem" }}>
-                Coming soon. We&rsquo;re not stopping there, either.
+                Coming soon. We&rsquo;re not stopping there, either. (At least
+                that&rsquo;s what the cows, pigs, goats, and chickens told us.)
               </p>
             </div>
           </div>
@@ -100,18 +106,14 @@ export default function Treats() {
             fontWeight: 500,
             lineHeight: 1.5,
             color: "var(--soft-ink)",
-            marginBottom: "1.5rem",
           }}>
-            Recipes built carefully and thoughtfully.
-            Tested by an extensive committee of in-house critics.
+            Recipes built carefully and thoughtfully. Tested by an extensive
+            committee of in-house and on-farm critics.
           </h2>
-          <p style={{ color: "var(--soft-ink)", opacity: 0.8, fontSize: "0.95rem" }}>
-            Three dogs, six cats, several chickens with strong opinions.
-          </p>
         </div>
       </section>
 
-      {/* SIGNUP CTA */}
+      {/* SIGNUP */}
       <section className="section section-cream" style={{ textAlign: "center" }}>
         <div className="content">
           <div className="section-eyebrow">First in line</div>
@@ -119,8 +121,8 @@ export default function Treats() {
             Want to <em>know</em> when treats are ready?
           </h2>
           <p className="section-lead">
-            Drop your email and you&rsquo;ll be among the first to hear when the bakery opens
-            in July 2026. No spam. We promise.
+            Drop your email and you&rsquo;ll be among the first to hear when the
+            bakery opens in July 2026. No spam. We promise.
           </p>
           <div className="signup">
             <input type="email" placeholder="your email, please" aria-label="Email address" />
