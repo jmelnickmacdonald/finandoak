@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {/* ============ PANORAMA — full-width editorial band ============ */}
+      {/* PANORAMA */}
       <section style={{ width: "100%" }}>
         <img
           src="/finandoakcollagehero.png"
@@ -12,14 +12,14 @@ export default function Home() {
         />
       </section>
 
-      {/* ============ HERO TYPE — sits below the panorama ============ */}
+      {/* HERO */}
       <section style={{
         maxWidth: "1400px",
         margin: "0 auto",
-        padding: "clamp(3rem, 6vw, 5rem) var(--gutter) clamp(4rem, 8vw, 6rem)",
+        padding: "clamp(3rem, 6vw, 5rem) var(--gutter) clamp(3.5rem, 7vw, 5.5rem)",
         textAlign: "center",
       }}>
-        {/* Eyebrow with rules on both sides */}
+        {/* Eyebrow */}
         <div style={{
           display: "inline-flex",
           alignItems: "center",
@@ -36,44 +36,47 @@ export default function Home() {
           <span style={{ width: "36px", height: "1.5px", background: "var(--caramel)" }}></span>
         </div>
 
+        {/* Headline */}
         <h1 style={{
           fontFamily: "var(--font-display)",
           fontStyle: "italic",
-          fontWeight: 500,
-          fontSize: "clamp(2.75rem, 6.5vw, 5.5rem)",
-          lineHeight: 0.98,
+          fontWeight: 400,
+          fontSize: "clamp(1.75rem, 3vw, 2.4rem)",
+          lineHeight: 1.3,
           color: "var(--soft-ink)",
-          letterSpacing: "-0.02em",
-          marginBottom: "1rem",
-          maxWidth: "18ch",
-          marginLeft: "auto",
-          marginRight: "auto",
+          letterSpacing: "-0.005em",
+          marginBottom: "1.5rem",
         }}>
           Small batches. Big messes. Happy critters.
         </h1>
 
-        <div style={{
-          fontFamily: "var(--font-script)",
-          fontFeatureSettings: '"liga" 1, "dlig" 1, "clig" 1',
-          fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)",
-          color: "var(--caramel)",
-          lineHeight: 1,
-          marginBottom: "2.5rem",
-        }}>
-          What&rsquo;s better than that?
-        </div>
-
+        {/* Sub-line */}
         <p style={{
-          fontSize: "1.05rem",
+          fontFamily: "var(--font-body)",
+          fontWeight: 300,
+          fontSize: "clamp(1.2rem, 1.7vw, 1.4rem)",
           lineHeight: 1.65,
-          color: "var(--muted-ink)",
-          maxWidth: "38rem",
-          margin: "0 auto 2.25rem",
+          color: "var(--soft-ink)",
+          maxWidth: "38ch",
+          margin: "0 auto 2.5rem",
         }}>
-          Handmade pet treats from a mom-and-daughter bakery in the heart of the
-          Annapolis Valley. Real ingredients. Spoiled regulars.
+          Handmade treats for dogs and cats from a mom-and-daughter bakery in
+          the heart of the Annapolis Valley. Real ingredients. Spoiled regulars.
         </p>
 
+        {/* Signature image */}
+        <div style={{
+          maxWidth: "240px",
+          margin: "0 auto 3rem",
+        }}>
+          <img
+            src="/willow-and-mom.png"
+            alt="— Willow & Mom"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
+
+        {/* CTAs */}
         <div style={{
           display: "inline-flex",
           gap: "1.5rem",
@@ -110,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ THREE PILLARS ============ */}
+      {/* THREE PILLARS */}
       <section className="section section-warm">
         <div className="container">
           <div className="section-eyebrow">What this brand is about</div>
@@ -121,33 +124,35 @@ export default function Home() {
           <div className="pillars">
             <div className="pillar">
               <img src="/ears/ear-01.svg" alt="" className="pillar-ear" />
-              <h3>Real ingredients.</h3>
+              <h3>Made by hand, in a real kitchen.</h3>
               <p>
-                Nothing weird, nothing we can&rsquo;t pronounce. Recipes built carefully
-                and thoughtfully.
+                Not a factory and not a co-packer. An actual kitchen, in an
+                actual house (ours to be specific) in Meadowvale, Nova Scotia.
               </p>
             </div>
             <div className="pillar">
               <img src="/ears/ear-07.svg" alt="" className="pillar-ear" />
-              <h3>Real people.</h3>
+              <h3>Tested by a thorough and committed team of testers.</h3>
               <p>
-                A mom-and-daughter operation. Willow runs the show. The household
-                runs the chaos.
+                Two dogs, six cats, and a few chickens &mdash; who may not be the
+                best judge of character (they&rsquo;ve been known to root through
+                horse poop given the opportunity), but they are enthusiastic
+                regardless.
               </p>
             </div>
             <div className="pillar">
               <img src="/ears/ear-12.svg" alt="" className="pillar-ear" />
-              <h3>Real reasons.</h3>
+              <h3>You&rsquo;ll know what&rsquo;s in it.</h3>
               <p>
-                Most of our customers can&rsquo;t say thank you in words, and they
-                don&rsquo;t have to &mdash; you already know.
+                Every ingredient on the package and every reason why it&rsquo;s
+                in there in the first place.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ============ SIGNUP CTA ============ */}
+      {/* SIGNUP */}
       <section id="signup" className="section section-cream" style={{ textAlign: "center" }}>
         <div className="content">
           <div className="section-eyebrow">First in line</div>
@@ -156,7 +161,7 @@ export default function Home() {
           </h2>
           <p className="section-lead">
             Drop your email and you&rsquo;ll be among the first to hear when the
-            bakery opens in July 2026. No spam. We promise.
+            bakery opens in July 2026. No spam, we promise!
           </p>
           <div className="signup">
             <input
