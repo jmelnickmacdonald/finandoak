@@ -18,7 +18,7 @@ export default function Story() {
         <span></span>
       </div>
 
-      {/* OUR STORY — main copy */}
+      {/* OPENING + BODY */}
       <section className="section section-cream" style={{ paddingTop: 0 }}>
         <div className="content">
           <p style={{
@@ -36,21 +36,24 @@ export default function Story() {
 
           <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
             Mom and Willow have been talking about a pet treat business since
-            Willow was six. They&rsquo;d float ideas, sketch out names, get a little
-            serious about it, and then dinner would happen &mdash; or homework, or one
-            of the cats would knock something over, or it would be bedtime, or
-            someone would need a snack, or life would just keep lifeing. The
-            conversation would get shelved until the next round.
+            Willow was six. They&rsquo;d float ideas, sketch out names, go
+            through efforts to craft logos, get a little serious about it, and
+            then dinner would happen &mdash; or homework, or a laptop battery
+            would die, or it would be bedtime, or someone would need a snack,
+            or life would just keep lifeing. The conversation would get shelved
+            until the next round.
           </p>
 
           <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            Well, life be darned. We&rsquo;re doing this now. Partly because at eleven,
-            Willow is pretty darn awesome and self-sufficient &mdash; I can confidently
-            trust she won&rsquo;t lose a finger to the mixer without me in the room.
-            Just don&rsquo;t give the kid a grapefruit knife. But that&rsquo;s a story for
-            another day.
+            Well, life be darned, it&rsquo;s time! We&rsquo;re doing this now.
+            Largely because at eleven, Willow is pretty darn awesome and
+            self-sufficient and I can confidently trust she won&rsquo;t lose a
+            finger to the mixer without me in the room. Just don&rsquo;t give
+            the kid a grapefruit knife. But that&rsquo;s a story for another
+            day.
           </p>
 
+          {/* Willow's team */}
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontSize: "1.75rem",
@@ -63,15 +66,17 @@ export default function Story() {
           </h2>
 
           <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            Fin &amp; Oak Bark Bakery is officially Willow&rsquo;s gig. Mom is her partner
-            on the build &mdash; on ovens, on anything that requires a credit card, and
-            on the parts that require grown-up expertise (just don&rsquo;t tell her that,
-            she&rsquo;ll say otherwise). Her siblings are the rest of the team:
-            assembly line, taste-testers, official second opinions, frequent
-            dissenters. Dad has, on more than one occasion, taste-tested the
-            inventory before remembering what it&rsquo;s for. The animals supervise.
+            Fin &amp; Oak Bark Bakery is officially Willow&rsquo;s gig. Mom is
+            her partner on the build &mdash; on oven timers, on anything that
+            requires a credit card, and on the parts that require grown-up
+            expertise (just don&rsquo;t tell her that, she&rsquo;ll say
+            otherwise). Her siblings are the rest of the team: assembly line,
+            taste-testers, official second opinions, and frequent dissenters.
+            Dad has, on more than one occasion, taste-tested the inventory
+            before remembering what it&rsquo;s for. The animals supervise.
           </p>
 
+          {/* About the name */}
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontSize: "1.75rem",
@@ -84,22 +89,33 @@ export default function Story() {
           </h2>
 
           <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            Fin was Mom and Dad&rsquo;s first baby &mdash; the dog they brought every one of
-            the kids home to. By the time Willow arrived he&rsquo;d already taken on the
-            role of senior household manager. She loved him fiercely her whole
-            life, the way he loved her &mdash; patiently, steadily, always nearby. He
-            passed peacefully this past spring, just shy of thirteen years old.
+            Fin was Mom and Dad&rsquo;s first baby &mdash; the dog they brought
+            every one of the kids home to. By the time Willow arrived
+            he&rsquo;d already taken on the role of canine household manager.
+            She loved him fiercely her whole life, the very same way he loved
+            her &mdash; patiently, steadily, and always nearby. He passed
+            peacefully this past spring, just shy of thirteen years old. While
+            our hearts will always be a bit emptier without him here in person
+            to fill the gap, he epitomized what a great dog life looked like.
+            And what a great dog looked like, while he was at it. He set a high
+            standard here, I tell you.
           </p>
 
           <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
             Oak came along a few years after Fin and learned the job from him.
-            He&rsquo;s the easiest-going creature in the house &mdash; the dog who lives to
-            sunbathe on the deck, who lets the chaos happen around him, who has
-            never had a complicated day in his life. He&rsquo;s still on duty, mostly
-            by being present. We named the bakery for both of them because
-            they&rsquo;re the dogs who taught this family what a dog could be.
+            He&rsquo;s the easiest-going creature in the house &mdash; the dog
+            who lives to sunbathe on the deck, who lets the chaos happen
+            around him, who has never had a complicated day in his life.
+            He&rsquo;s still on duty, mostly by being present. Just don&rsquo;t
+            make him use his brain cell as he&rsquo;d rather not. Jokes aside,
+            he&rsquo;s an amazing pup as well and we&rsquo;ve been very
+            blessed. We named the bakery for both of them because they&rsquo;re
+            the dogs who taught this family what a dog could be and how dog
+            breath, pup pillows, and just their presence is like glue in this
+            family.
           </p>
 
+          {/* About Piper */}
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontSize: "1.75rem",
@@ -112,19 +128,21 @@ export default function Story() {
           </h2>
 
           <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            Piper came after the name was settled. She&rsquo;s the youngest, and a
-            study in contradictions &mdash; afraid of her own shadow most of the time,
-            but ready to take on the world the moment somebody looks sideways at
-            one of the kids. The whole farm loves her. The chickens, the cats,
-            every creature here has, at some point, curled up next to Piper.
-            (Except the geese. The geese don&rsquo;t like anyone.) She is Willow&rsquo;s
-            girl, through and through. Most of her best habits are Willow&rsquo;s.
-            Most of her worst habits are Willow&rsquo;s too.
+            Piper came after the name was settled. She&rsquo;s the youngest,
+            and a study in contradictions. She&rsquo;s afraid of her own shadow
+            most of the time, but ready to take on the world the moment
+            somebody looks sideways at one of the kids. The whole farm loves
+            her. The chickens, the cats, every creature here has, at some
+            point, curled up next to Piper. (Except the geese. The geese
+            don&rsquo;t like anyone.) She is Willow&rsquo;s girl, through and
+            through. Most of her best habits are Willow&rsquo;s... and so are
+            all of her worst. This will be immediately evident when she jumps
+            up on you for a hug, just the way Willow likes!
           </p>
         </div>
       </section>
 
-      {/* WHO WE ARE — three pillars */}
+      {/* THREE PILLARS */}
       <section className="section section-warm">
         <div className="container">
           <div className="section-eyebrow">What this brand is about</div>
@@ -135,18 +153,29 @@ export default function Story() {
           <div className="pillars">
             <div className="pillar">
               <img src="/ears/ear-01.svg" alt="" className="pillar-ear" />
-              <h3>Real ingredients.</h3>
-              <p>Nothing weird, nothing we can&rsquo;t pronounce.</p>
+              <h3>Made by hand, in a real kitchen.</h3>
+              <p>
+                Not a factory and not a co-packer. An actual kitchen, in an
+                actual house (ours to be specific) in Meadowvale, Nova Scotia.
+              </p>
             </div>
             <div className="pillar">
               <img src="/ears/ear-07.svg" alt="" className="pillar-ear" />
-              <h3>Real people.</h3>
-              <p>Willow runs the show. The household runs the chaos.</p>
+              <h3>Tested by a thorough and committed team of testers.</h3>
+              <p>
+                Two dogs, six cats, and a few chickens &mdash; who may not be the
+                best judge of character (they&rsquo;ve been known to root through
+                horse poop given the opportunity), but they are enthusiastic
+                regardless.
+              </p>
             </div>
             <div className="pillar">
               <img src="/ears/ear-12.svg" alt="" className="pillar-ear" />
-              <h3>Real reasons.</h3>
-              <p>You already know.</p>
+              <h3>You&rsquo;ll know what&rsquo;s in it.</h3>
+              <p>
+                Every ingredient on the package and every reason why it&rsquo;s
+                in there in the first place.
+              </p>
             </div>
           </div>
         </div>
@@ -155,15 +184,13 @@ export default function Story() {
       {/* SIGNATURE */}
       <section className="section section-cream" style={{ textAlign: "center", paddingTop: "2rem" }}>
         <div className="content">
-          <p style={{
-            fontFamily: "var(--font-script)",
-            fontSize: "2.75rem",
-            color: "var(--coastal-blue)",
-            lineHeight: 1,
-            fontFeatureSettings: '"liga" 1, "dlig" 1, "clig" 1',
-          }}>
-            &mdash; Willow &amp; Mom
-          </p>
+          <div style={{ maxWidth: "240px", margin: "0 auto" }}>
+            <img
+              src="/willow-and-mom.png"
+              alt="— Willow & Mom"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
         </div>
       </section>
     </>
