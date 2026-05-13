@@ -46,7 +46,7 @@ export default function Treats() {
               borderRadius: "8px",
               textAlign: "center",
             }}>
-              <img src="/ears/ear-02.svg" alt="" style={{ width: "72px", height: "72px", margin: "0 auto 1.25rem", opacity: 0.9 }} />
+              <img src="/dogstamp.png" alt="" style={{ width: "140px", height: "140px", margin: "0 auto 1.25rem", display: "block" }} />
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
                 For Dogs
               </h3>
@@ -65,7 +65,7 @@ export default function Treats() {
               borderRadius: "8px",
               textAlign: "center",
             }}>
-              <img src="/ears/ear-09.svg" alt="" style={{ width: "72px", height: "72px", margin: "0 auto 1.25rem", opacity: 0.9 }} />
+              <img src="/catstamp.png" alt="" style={{ width: "140px", height: "140px", margin: "0 auto 1.25rem", display: "block" }} />
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
                 For Cats
               </h3>
@@ -83,7 +83,7 @@ export default function Treats() {
               textAlign: "center",
               opacity: 0.85,
             }}>
-              <img src="/ears/ear-14.svg" alt="" style={{ width: "72px", height: "72px", margin: "0 auto 1.25rem", opacity: 0.9 }} />
+              <img src="/horsestamp.png" alt="" style={{ width: "140px", height: "140px", margin: "0 auto 1.25rem", display: "block" }} />
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
                 For Horses
               </h3>
