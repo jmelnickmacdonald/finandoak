@@ -34,6 +34,28 @@ export default function Story() {
             <span style={{ color: "var(--coastal-blue)" }}>This one took a few years to leave it.</span>
           </p>
 
+          {/* KEYSTONE PHOTO: Willow + Fin */}
+          <figure style={{
+            margin: "0 auto 2.5rem",
+            maxWidth: "70%",
+            textAlign: "center",
+          }}>
+            <img
+              src="/willow-and-fin.jpg"
+              alt="Willow as a toddler, leaning against Fin, reading"
+              style={{ width: "100%", height: "auto", display: "block", borderRadius: "2px" }}
+            />
+            <figcaption style={{
+              fontFamily: "var(--font-display)",
+              fontStyle: "italic",
+              fontSize: "0.95rem",
+              color: "var(--caramel)",
+              marginTop: "0.75rem",
+            }}>
+              Willow &amp; Fin
+            </figcaption>
+          </figure>
+
           <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
             Mom and Willow have been talking about a pet treat business since
             Willow was six. They&rsquo;d float ideas, sketch out names, go
@@ -101,6 +123,29 @@ export default function Story() {
             standard here, I tell you.
           </p>
 
+          {/* FIN PHOTO: portrait in the shade */}
+          <figure style={{
+            margin: "2rem auto 2.5rem",
+            maxWidth: "70%",
+            textAlign: "center",
+          }}>
+            <img
+              src="/fin-in-shade.jpg"
+              alt="Fin lying in the shade, calm and watching"
+              loading="lazy"
+              style={{ width: "100%", height: "auto", display: "block", borderRadius: "2px" }}
+            />
+            <figcaption style={{
+              fontFamily: "var(--font-display)",
+              fontStyle: "italic",
+              fontSize: "0.95rem",
+              color: "var(--caramel)",
+              marginTop: "0.75rem",
+            }}>
+              Fin
+            </figcaption>
+          </figure>
+
           <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
             Oak came along a few years after Fin and learned the job from him.
             He&rsquo;s the easiest-going creature in the house &mdash; the dog
@@ -114,6 +159,29 @@ export default function Story() {
             breath, pup pillows, and just their presence is like glue in this
             family.
           </p>
+
+          {/* OAK PHOTO: with Eliot */}
+          <figure style={{
+            margin: "2rem auto 2.5rem",
+            maxWidth: "70%",
+            textAlign: "center",
+          }}>
+            <img
+              src="/oak-and-eliot.jpg"
+              alt="Oak and Eliot the cat, head to head"
+              loading="lazy"
+              style={{ width: "100%", height: "auto", display: "block", borderRadius: "2px" }}
+            />
+            <figcaption style={{
+              fontFamily: "var(--font-display)",
+              fontStyle: "italic",
+              fontSize: "0.95rem",
+              color: "var(--caramel)",
+              marginTop: "0.75rem",
+            }}>
+              Oak &amp; Eliot
+            </figcaption>
+          </figure>
 
           {/* About Piper */}
           <h2 style={{
@@ -139,6 +207,29 @@ export default function Story() {
             all of her worst. This will be immediately evident when she jumps
             up on you for a hug, just the way Willow likes!
           </p>
+
+          {/* PIPER PHOTO: in the snow */}
+          <figure style={{
+            margin: "0 auto 2.5rem",
+            maxWidth: "70%",
+            textAlign: "center",
+          }}>
+            <img
+              src="/piper-in-snow.jpg"
+              alt="Piper bounding through the snow, looking at the camera"
+              loading="lazy"
+              style={{ width: "100%", height: "auto", display: "block", borderRadius: "2px" }}
+            />
+            <figcaption style={{
+              fontFamily: "var(--font-display)",
+              fontStyle: "italic",
+              fontSize: "0.95rem",
+              color: "var(--caramel)",
+              marginTop: "0.75rem",
+            }}>
+              Piper
+            </figcaption>
+          </figure>
         </div>
       </section>
 
