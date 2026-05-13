@@ -1,27 +1,23 @@
-
-import Link from "next/link";
-
 export const metadata = {
   title: "Raven House · Fin & Oak Bark Bakery",
   description:
     "The homestead behind Fin & Oak Bark Bakery. Mud boots, chores, calamity, and joy in the Annapolis Valley.",
 };
 
-// Strip photos in display order. Alternating subjects so the eye stays interested.
 const stripPhotos = [
-  { src: "/dogs-and-geese.jpg",     alt: "Oakley and Piper on patrol with the goose squad" },
-  { src: "/babygoatfun.jpg",        alt: "Baby goat" },
-  { src: "/quinnandluna.jpg",       alt: "Quinn and Luna" },
-  { src: "/goats-portrait.jpg",     alt: "Two goats, looking at the camera" },
-  { src: "/roryandmax.jpg",         alt: "Rory and Max" },
-  { src: "/mama-and-kids.jpg",      alt: "A mama goat watching her two newborns in the hay" },
-  { src: "/willow-and-chick.jpg",   alt: "Willow with a baby chick" },
-  { src: "/sageonastra.jpg",        alt: "Sage on Astra" },
-  { src: "/baby-goat-nuzzle.jpg",   alt: "A baby goat, nuzzling in" },
-  { src: "/willowandastra.jpg",     alt: "Willow and Astra" },
-  { src: "/mom-and-calf.jpg",       alt: "Mom and a newborn calf" },
-  { src: "/sageandmax.jpg",         alt: "Sage and Max" },
-  { src: "/eggs-and-teapot.jpg",    alt: "A morning's eggs and a painted teapot" },
+  { src: "/dogs-and-geese.jpg",   alt: "Oakley and Piper on patrol with the goose squad" },
+  { src: "/babygoatfun.jpg",      alt: "Baby goat" },
+  { src: "/quinnandluna.jpg",     alt: "Quinn and Luna" },
+  { src: "/goats-portrait.jpg",   alt: "Two goats, looking at the camera" },
+  { src: "/roryandmax.jpg",       alt: "Rory and Max" },
+  { src: "/mama-and-kids.jpg",    alt: "A mama goat watching her two newborns in the hay" },
+  { src: "/willow-and-chick.jpg", alt: "Willow with a baby chick" },
+  { src: "/sageonastra.jpg",      alt: "Sage on Astra" },
+  { src: "/baby-goat-nuzzle.jpg", alt: "A baby goat, nuzzling in" },
+  { src: "/willowandastra.jpg",   alt: "Willow and Astra" },
+  { src: "/mom-and-calf.jpg",     alt: "Mom and a newborn calf" },
+  { src: "/sageandmax.jpg",       alt: "Sage and Max" },
+  { src: "/eggs-and-teapot.jpg",  alt: "A morning's eggs and a painted teapot" },
 ];
 
 export default function RavenHousePage() {
@@ -32,9 +28,7 @@ export default function RavenHousePage() {
         margin: "0 auto",
         padding: "3rem var(--gutter) 2rem",
         color: "var(--soft-ink)",
-        fontFamily: "var(--font-body-loaded), system-ui, sans-serif",
       }}>
-        {/* Eyebrow */}
         <p style={{
           textAlign: "center",
           fontSize: "0.7rem",
@@ -46,10 +40,9 @@ export default function RavenHousePage() {
           Raven House
         </p>
 
-        {/* Headline */}
         <h1 style={{
           textAlign: "center",
-          fontFamily: "var(--font-display-loaded), Georgia, serif",
+          fontFamily: "var(--font-display), Georgia, serif",
           fontStyle: "italic",
           fontWeight: 400,
           fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
@@ -59,7 +52,6 @@ export default function RavenHousePage() {
           Chaos and magic, in equal measure.
         </h1>
 
-        {/* Caramel rule */}
         <div style={{
           width: "40px",
           height: "1px",
@@ -68,7 +60,6 @@ export default function RavenHousePage() {
           margin: "0 auto 2.5rem",
         }} />
 
-        {/* Body */}
         <div style={{ fontSize: "1.05rem", lineHeight: 1.75 }}>
           <p style={{ margin: "0 0 1.25rem" }}>
             Life at Raven House is equal parts mud boots, chores, calamity and joy.
@@ -116,12 +107,7 @@ export default function RavenHousePage() {
         </div>
       </article>
 
-      {/* Strip section — breaks out of the 780px article so the strip can run wider */}
-      <section
-        aria-label="A glimpse around the homestead"
-        style={{ padding: "1.5rem 0 4rem" }}
-      >
-        {/* Caramel rule */}
+      <section style={{ padding: "1.5rem 0 4rem" }}>
         <div style={{
           width: "40px",
           height: "1px",
@@ -130,7 +116,6 @@ export default function RavenHousePage() {
           margin: "0 auto 1.5rem",
         }} />
 
-        {/* Strip eyebrow */}
         <p style={{
           textAlign: "center",
           fontSize: "0.7rem",
@@ -141,9 +126,9 @@ export default function RavenHousePage() {
         }}>
           A glimpse
         </p>
+
         <p style={{
           textAlign: "center",
-          fontFamily: "var(--font-body-loaded), system-ui, sans-serif",
           fontSize: "0.85rem",
           color: "var(--muted-ink)",
           fontStyle: "italic",
@@ -152,16 +137,10 @@ export default function RavenHousePage() {
           scroll &rarr;
         </p>
 
-        {/* The strip */}
         <div className="rh-strip">
           {stripPhotos.map((photo) => (
             <div key={photo.src} className="rh-strip-item">
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                decoding="async"
-              />
+              <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
             </div>
           ))}
         </div>
