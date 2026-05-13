@@ -50,19 +50,33 @@ export default function Home() {
           Small batches. Big messes. Happy critters.
         </h1>
 
-        {/* Sub-line */}
+        {/* Sub-line — widened, just the descriptive sentence */}
         <p style={{
           fontFamily: "var(--font-body)",
           fontWeight: 300,
-          fontSize: "clamp(1.2rem, 1.7vw, 1.4rem)",
+          fontSize: "clamp(1.15rem, 1.5vw, 1.3rem)",
           lineHeight: 1.65,
-          color: "var(--soft-ink)",
-          maxWidth: "38ch",
-          margin: "0 auto 2.5rem",
+          color: "var(--muted-ink)",
+          maxWidth: "52ch",
+          margin: "0 auto 2rem",
         }}>
           Handmade treats for dogs and cats from a mom-and-daughter bakery in
-          the heart of the Annapolis Valley. Real ingredients. Spoiled regulars.
+          the heart of the Annapolis Valley.
         </p>
+
+        {/* Tagline — matches the headline style, slightly smaller */}
+        <h2 style={{
+          fontFamily: "var(--font-display)",
+          fontStyle: "italic",
+          fontWeight: 400,
+          fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
+          lineHeight: 1.3,
+          color: "var(--soft-ink)",
+          letterSpacing: "-0.005em",
+          marginBottom: "2.5rem",
+        }}>
+          Real ingredients. Spoiled regulars.
+        </h2>
 
         {/* Signature image */}
         <div style={{
