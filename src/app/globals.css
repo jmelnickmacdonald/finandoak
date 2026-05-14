@@ -361,6 +361,24 @@ button {
   margin: 0 auto 3rem;
 }
 
+/* On blue/ink/sage backgrounds, recolour section-title em + section-eyebrow */
+.section-blue .section-title,
+.section-ink .section-title {
+  color: var(--cream);
+}
+.section-blue .section-title em,
+.section-ink .section-title em {
+  color: var(--apple-leaf-light);
+}
+.section-blue .section-eyebrow,
+.section-ink .section-eyebrow {
+  color: rgba(255, 253, 249, 0.65);
+}
+.section-blue .section-lead,
+.section-ink .section-lead {
+  color: rgba(255, 253, 249, 0.85);
+}
+
 /* ---------- DIVIDERS ---------- */
 .rule {
   width: 60px;
@@ -422,6 +440,24 @@ button {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--muted-ink);
+}
+
+/* When pillars live on a blue/ink section, invert the colour scheme */
+.section-blue .pillar h3,
+.section-ink .pillar h3 {
+  color: var(--cream);
+}
+.section-blue .pillar p,
+.section-ink .pillar p {
+  color: rgba(255, 253, 249, 0.85);
+}
+
+/* Generic stamp mark used in pillars (replaces .pillar-ear when stamps are wanted) */
+.pillar-stamp {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.25rem;
+  object-fit: contain;
 }
 
 /* ---------- FOOTER ---------- */
@@ -493,6 +529,37 @@ button {
   color: var(--caramel-light);
 }
 
+/* Raven House venture credit line */
+.footer-venture {
+  text-align: center;
+  padding: 1.75rem 0 0.5rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--caramel-light);
+  letter-spacing: 0.02em;
+}
+.footer-venture a {
+  color: var(--caramel-light);
+  text-decoration: none;
+}
+.footer-venture a:hover {
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+/* Powered by The Yellow Front Door — plain text credit */
+.footer-poweredby {
+  text-align: center;
+  padding: 0.25rem 0 1rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.45;
+}
+
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -504,6 +571,49 @@ button {
   letter-spacing: 0.05em;
   color: var(--cream);
   opacity: 0.6;
+}
+
+/* ---------- RAVEN HOUSE — horizontal scroll strip ---------- */
+.rh-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 var(--gutter) 1rem;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rh-strip::-webkit-scrollbar {
+  height: 8px;
+}
+
+.rh-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rh-strip::-webkit-scrollbar-thumb {
+  background: var(--tan-border);
+  border-radius: 4px;
+}
+
+.rh-strip-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.rh-strip-item img {
+  display: block;
+  height: 320px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+@media (max-width: 640px) {
+  .rh-strip-item img {
+    height: 240px;
+  }
 }
 
 /* ---------- RESPONSIVE ---------- */
