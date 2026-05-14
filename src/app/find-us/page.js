@@ -6,7 +6,7 @@ export default function FindUs() {
         <div className="container">
           <div className="hero-eyebrow">Find Us</div>
           <h1 className="section-title" style={{ fontSize: "clamp(2.5rem, 5.5vw, 3.5rem)", maxWidth: "22ch", margin: "0 auto" }}>
-            A small wooden stand <em>at the edge of the property.</em>
+            Where to <em>find us.</em>
           </h1>
         </div>
       </section>
@@ -30,32 +30,49 @@ export default function FindUs() {
           }}>
             Where we are.
           </h2>
-          <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            We bake out of the Annapolis Valley, Nova Scotia &mdash; in Meadowvale,
-            just down the road from Greenwood. Smack dab in the middle of apple
-            and farm country &mdash; the kind of place where you can drive five minutes
-            and pass half a dozen hay bales, a few barn cats, and some sheep
-            before you&rsquo;ll pass half as many humans. We bake from our small
-            kitchen and sell our treats from our little farm stand on the property.
+          <p style={{ marginBottom: "2rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
+            We bake out of our home in Nova Scotia&rsquo;s beautiful Annapolis Valley.
+            To be more specific, we are located in Meadowvale, just a hop, skip and
+            a jump away from Greenwood. That basically puts us smack dab in the
+            middle of apple and farm country &mdash; the kind of place where you can
+            drive five minutes and pass half a dozen hay bales, a few barn cats, and
+            some sheep before you&rsquo;ll pass half as many humans.
           </p>
 
-          <h2 style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "1.75rem",
-            color: "var(--coastal-blue)",
-            fontWeight: 500,
-            marginTop: "3rem",
-            marginBottom: "1.25rem",
+          {/* Farm stand photos — side by side on desktop, stacked on mobile */}
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "1rem",
+            margin: "0 0 2rem",
           }}>
-            The farm stand.
-          </h2>
-          <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            A small wooden stand at the edge of the Raven House property, run on
-            the honour system when no one&rsquo;s there. Cream signage, hand-lettered
-            when possible. A small chalkboard for what&rsquo;s fresh that day.
-          </p>
+            <img
+              src="/farmstand1.jpg"
+              alt="The farm stand at Raven House"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                borderRadius: "2px",
+              }}
+            />
+            <img
+              src="/farmstand2.jpg"
+              alt="The farm stand at Raven House"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                borderRadius: "2px",
+              }}
+            />
+          </div>
+
           <p style={{ marginBottom: "2.5rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            The farm stand isn&rsquo;t an outpost. It&rsquo;s the bakery.
+            We sell our treats from the cutest little wooden stand (even if I
+            do say so myself) nestled at the edge of the Raven House property.
+            Our hope is to expand into some local shops come Fall 2026, so stay
+            tuned!
           </p>
 
           <h2 style={{
@@ -86,8 +103,8 @@ export default function FindUs() {
             For wholesale, custom orders, or just to say hello:
           </p>
           <p style={{ marginBottom: "2rem", fontSize: "1.1rem" }}>
-            <a href="mailto:hello@finoakbarkbakery.com" style={{ color: "var(--coastal-blue)", borderBottom: "1px solid var(--coastal-blue)" }}>
-              hello@finoakbarkbakery.com
+            <a href="mailto:hello@finandoak.ca" style={{ color: "var(--coastal-blue)", borderBottom: "1px solid var(--coastal-blue)" }}>
+              hello@finandoak.ca
             </a>
           </p>
         </div>
