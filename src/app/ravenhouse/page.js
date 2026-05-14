@@ -28,21 +28,19 @@ export default function RavenHousePage() {
         margin: "0 auto",
         padding: "3rem var(--gutter) 2rem",
         color: "var(--soft-ink)",
+        textAlign: "center",
       }}>
-        <p style={{
-          textAlign: "center",
-          fontSize: "0.7rem",
-          letterSpacing: "0.22em",
-          textTransform: "uppercase",
-          color: "var(--caramel)",
-          margin: "0 0 0.75rem",
-        }}>
-          Raven House
-        </p>
+        {/* Raven House logo — modest, takes the place of the eyebrow */}
+        <div style={{ maxWidth: "180px", margin: "0 auto 1.5rem" }}>
+          <img
+            src="/ravenhouse.png"
+            alt="Raven House"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
 
         <h1 style={{
-          textAlign: "center",
-          fontFamily: "var(--font-display), Georgia, serif",
+          fontFamily: "var(--font-display)",
           fontStyle: "italic",
           fontWeight: 400,
           fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
@@ -60,7 +58,7 @@ export default function RavenHousePage() {
           margin: "0 auto 2.5rem",
         }} />
 
-        <div style={{ fontSize: "1.05rem", lineHeight: 1.75 }}>
+        <div style={{ fontSize: "1.05rem", lineHeight: 1.75, textAlign: "left" }}>
           <p style={{ margin: "0 0 1.25rem" }}>
             Life at Raven House is equal parts mud boots, chores, calamity and joy.
             Our animals keep us busy (and laughing), the gardens give us what the
