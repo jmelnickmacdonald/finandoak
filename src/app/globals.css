@@ -1,12 +1,8 @@
 /* ============================================
    FIN & OAK BARK BAKERY — GLOBAL STYLES
-   ============================================
-   Brand tokens locked. Edit here, change everywhere.
    ============================================ */
 
 /* ---------- FONTS ---------- */
-
-/* Praise — the hand-script display font, special moments only */
 @font-face {
   font-family: 'Praise';
   src: url('/fonts/Praise.otf') format('opentype');
@@ -17,7 +13,6 @@
 
 /* ---------- BRAND TOKENS ---------- */
 :root {
-  /* Primary palette */
   --coastal-blue: #074F6D;
   --coastal-blue-dark: #053D55;
   --coastal-blue-tint: #E8F2F7;
@@ -34,22 +29,18 @@
   --tan: #F1E9D6;
   --tan-border: #E0D5BE;
 
-  /* Apple Leaf — the supporting sage */
   --apple-leaf: #A6B088;
   --apple-leaf-light: #C5CCB8;
   --apple-leaf-dark: #8A957A;
 
-  /* Type system */
   --font-script: 'Praise', cursive;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Lato', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 
-  /* Layout */
   --max-width: 1200px;
   --content-width: 720px;
   --gutter: clamp(1.5rem, 4vw, 3rem);
 
-  /* OpenType ligatures — make sure Praise renders properly */
   font-feature-settings: "liga" 1, "dlig" 1, "clig" 1;
 }
 
@@ -60,9 +51,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
@@ -82,10 +71,7 @@ img, svg {
   display: block;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
 button {
   font: inherit;
@@ -131,7 +117,7 @@ button {
   font-weight: 700;
 }
 
-/* ---------- HEADER ---------- */
+/* ---------- HEADER (legacy class — keep for any existing usage) ---------- */
 .header {
   background: var(--cream);
   padding: 1.5rem var(--gutter) 1rem;
@@ -148,6 +134,29 @@ button {
 .header-logo img {
   width: 100%;
   height: auto;
+}
+
+/* ---------- SITE HEADER (with paw watermark) ---------- */
+.site-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/paw-pattern.png');
+  background-repeat: repeat;
+  background-size: 280px 280px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.site-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ---------- NAV ---------- */
@@ -177,18 +186,11 @@ button {
   transition: color 0.2s ease, background 0.2s ease;
 }
 
-.nav a:hover {
-  color: var(--caramel-light);
-}
-
-.nav a.active {
-  color: var(--caramel-light);
-}
+.nav a:hover { color: var(--caramel-light); }
+.nav a.active { color: var(--caramel-light); }
 
 /* ---------- LAYOUT ---------- */
-.section {
-  padding: clamp(3rem, 8vw, 6rem) var(--gutter);
-}
+.section { padding: clamp(3rem, 8vw, 6rem) var(--gutter); }
 
 .section-cream { background: var(--cream); }
 .section-warm { background: var(--cream-warm); }
@@ -197,15 +199,8 @@ button {
 .section-sage { background: var(--apple-leaf); color: var(--soft-ink); }
 .section-tan { background: var(--tan); }
 
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.content {
-  max-width: var(--content-width);
-  margin: 0 auto;
-}
+.container { max-width: var(--max-width); margin: 0 auto; }
+.content { max-width: var(--content-width); margin: 0 auto; }
 
 /* ---------- HERO ---------- */
 .hero {
@@ -276,9 +271,7 @@ button {
   color: var(--cream);
 }
 
-.btn-primary:hover {
-  background: var(--coastal-blue-dark);
-}
+.btn-primary:hover { background: var(--coastal-blue-dark); }
 
 .btn-outline {
   background: transparent;
@@ -361,23 +354,17 @@ button {
   margin: 0 auto 3rem;
 }
 
-/* On blue/ink/sage backgrounds, recolour section-title em + section-eyebrow */
 .section-blue .section-title,
-.section-ink .section-title {
-  color: var(--cream);
-}
+.section-ink .section-title { color: var(--cream); }
+
 .section-blue .section-title em,
-.section-ink .section-title em {
-  color: var(--apple-leaf-light);
-}
+.section-ink .section-title em { color: var(--apple-leaf-light); }
+
 .section-blue .section-eyebrow,
-.section-ink .section-eyebrow {
-  color: rgba(255, 253, 249, 0.65);
-}
+.section-ink .section-eyebrow { color: rgba(255, 253, 249, 0.65); }
+
 .section-blue .section-lead,
-.section-ink .section-lead {
-  color: rgba(255, 253, 249, 0.85);
-}
+.section-ink .section-lead { color: rgba(255, 253, 249, 0.85); }
 
 /* ---------- DIVIDERS ---------- */
 .rule {
@@ -407,7 +394,7 @@ button {
   background: var(--tan-border);
 }
 
-/* ---------- VALUES (3-pillar list) ---------- */
+/* ---------- PILLARS ---------- */
 .pillars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -416,9 +403,7 @@ button {
   margin: 3rem auto 0;
 }
 
-.pillar {
-  text-align: center;
-}
+.pillar { text-align: center; }
 
 .pillar-ear {
   width: 80px;
@@ -442,17 +427,12 @@ button {
   color: var(--muted-ink);
 }
 
-/* When pillars live on a blue/ink section, invert the colour scheme */
 .section-blue .pillar h3,
-.section-ink .pillar h3 {
-  color: var(--cream);
-}
-.section-blue .pillar p,
-.section-ink .pillar p {
-  color: rgba(255, 253, 249, 0.85);
-}
+.section-ink .pillar h3 { color: var(--cream); }
 
-/* Generic stamp mark used in pillars (replaces .pillar-ear when stamps are wanted) */
+.section-blue .pillar p,
+.section-ink .pillar p { color: rgba(255, 253, 249, 0.85); }
+
 .pillar-stamp {
   width: 100px;
   height: 100px;
@@ -529,7 +509,6 @@ button {
   color: var(--caramel-light);
 }
 
-/* Raven House venture credit line */
 .footer-venture {
   text-align: center;
   padding: 1.75rem 0 0.5rem;
@@ -539,16 +518,17 @@ button {
   color: var(--caramel-light);
   letter-spacing: 0.02em;
 }
+
 .footer-venture a {
   color: var(--caramel-light);
   text-decoration: none;
 }
+
 .footer-venture a:hover {
   opacity: 0.75;
   transition: opacity 0.2s ease;
 }
 
-/* Powered by The Yellow Front Door — plain text credit */
 .footer-poweredby {
   text-align: center;
   padding: 0.25rem 0 1rem;
@@ -584,14 +564,8 @@ button {
   -webkit-overflow-scrolling: touch;
 }
 
-.rh-strip::-webkit-scrollbar {
-  height: 8px;
-}
-
-.rh-strip::-webkit-scrollbar-track {
-  background: transparent;
-}
-
+.rh-strip::-webkit-scrollbar { height: 8px; }
+.rh-strip::-webkit-scrollbar-track { background: transparent; }
 .rh-strip::-webkit-scrollbar-thumb {
   background: var(--tan-border);
   border-radius: 4px;
@@ -611,9 +585,7 @@ button {
 }
 
 @media (max-width: 640px) {
-  .rh-strip-item img {
-    height: 240px;
-  }
+  .rh-strip-item img { height: 240px; }
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -622,26 +594,4 @@ button {
   .nav-inner { gap: 0; }
   .nav a { padding: 0.85rem 1rem; font-size: 0.75rem; }
   .header-logo { max-width: 220px; }
-}
-/* ---------- HEADER WATERMARK (experimental — paw pattern) ---------- */
-.header {
-  position: relative;
-  overflow: hidden;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('/paw-pattern.png');
-  background-repeat: repeat;
-  background-size: 280px 280px;
-  opacity: 0.45;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.header > * {
-  position: relative;
-  z-index: 1;
 }
