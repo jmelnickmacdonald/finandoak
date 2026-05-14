@@ -18,78 +18,42 @@ export default function Treats() {
         </div>
       </section>
 
-      {/* DIVIDER */}
-      <div className="rule-ear" aria-hidden="true">
-        <span></span>
-        <img src="/ears/ear-05.svg" alt="" />
-        <span></span>
-      </div>
-
-      {/* CATEGORIES */}
-      <section className="section section-cream">
+      {/* CATEGORIES — Coastal Blue band, mirrors homepage pillars */}
+      <section className="section section-blue">
         <div className="container">
           <div className="section-eyebrow">What we make</div>
-          <h2 className="section-title" style={{ marginBottom: "3rem" }}>
-            Coming July 2026.
+          <h2 className="section-title">
+            Coming <em>July 2026.</em>
           </h2>
 
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: "2rem",
-            maxWidth: "64rem",
-            margin: "0 auto",
-          }}>
-            <div style={{
-              background: "var(--cream-warm)",
-              padding: "2.5rem 2rem",
-              borderRadius: "8px",
-              textAlign: "center",
-            }}>
-              <img src="/dogstamp.png" alt="" style={{ width: "140px", height: "140px", margin: "0 auto 1.25rem", display: "block" }} />
-              <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
-                For Dogs
-              </h3>
-              <p style={{ color: "var(--muted-ink)", fontSize: "0.95rem" }}>
-                Biscuits, training treats, every time you pass them in the living
-                room and they stare at you with those sweet little puppy dogs
-                eyes... you know, the everyday stuff. (Only joking... like all
-                good things, in moderation of course.) Baked for dogs whose
-                humans don&rsquo;t cut corners.
+          <div className="pillars">
+            <div className="pillar">
+              <img src="/dogstamp.png" alt="" className="pillar-stamp" />
+              <h3>For Dogs</h3>
+              <p>
+                Biscuits, training treats, every time you pass them in the
+                living room and they stare at you with those sweet little
+                puppy dogs eyes... you know, the everyday stuff. (Only
+                joking... like all good things, in moderation of course.)
+                Baked for dogs whose humans don&rsquo;t cut corners.
               </p>
             </div>
-
-            <div style={{
-              background: "var(--cream-warm)",
-              padding: "2.5rem 2rem",
-              borderRadius: "8px",
-              textAlign: "center",
-            }}>
-              <img src="/catstamp.png" alt="" style={{ width: "140px", height: "140px", margin: "0 auto 1.25rem", display: "block" }} />
-              <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
-                For Cats
-              </h3>
-              <p style={{ color: "var(--muted-ink)", fontSize: "0.95rem" }}>
-                Yes, them too. Whether they admit they want them or not. These
-                are taking some time to refine because... cats. Before long,
-                though, they&rsquo;ll be gracing our shelves and page.
+            <div className="pillar">
+              <img src="/catstamp.png" alt="" className="pillar-stamp" />
+              <h3>For Cats</h3>
+              <p>
+                Yes, them too. Whether they admit they want them or not.
+                These are taking some time to refine because... cats. Before
+                long, though, they&rsquo;ll be gracing our shelves and page.
               </p>
             </div>
-
-            <div style={{
-              background: "var(--cream-warm)",
-              padding: "2.5rem 2rem",
-              borderRadius: "8px",
-              textAlign: "center",
-              opacity: 0.85,
-            }}>
-              <img src="/horsestamp.png" alt="" style={{ width: "140px", height: "140px", margin: "0 auto 1.25rem", display: "block" }} />
-              <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", color: "var(--coastal-blue)", marginBottom: "0.75rem" }}>
-                For Horses
-              </h3>
-              <p style={{ color: "var(--muted-ink)", fontSize: "0.95rem" }}>
-                Coming soon. We&rsquo;re not stopping there, either. (At least
-                that&rsquo;s what the cows, pigs, goats, and chickens told us.)
+            <div className="pillar" style={{ opacity: 0.85 }}>
+              <img src="/horsestamp.png" alt="" className="pillar-stamp" />
+              <h3>For Horses</h3>
+              <p>
+                Coming soon. We&rsquo;re not stopping there, either. (At
+                least that&rsquo;s what the cows, pigs, goats, and chickens
+                told us.)
               </p>
             </div>
           </div>
