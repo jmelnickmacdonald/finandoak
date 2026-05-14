@@ -623,3 +623,25 @@ button {
   .nav a { padding: 0.85rem 1rem; font-size: 0.75rem; }
   .header-logo { max-width: 220px; }
 }
+/* ---------- HEADER WATERMARK (experimental — paw pattern) ---------- */
+.header {
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/paw-pattern.png');
+  background-repeat: repeat;
+  background-size: 280px 280px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header > * {
+  position: relative;
+  z-index: 1;
+}
