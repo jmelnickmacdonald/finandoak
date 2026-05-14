@@ -12,8 +12,8 @@ export default function Home() {
         />
       </section>
 
-      {/* HEADLINE + SIGNATURE */}
-      <section className="section section-cream" style={{ paddingTop: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)", textAlign: "center" }}>
+      {/* HEADLINE + SIGNATURE — now with watermark behind it */}
+      <section className="section section-cream headline-section" style={{ paddingTop: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)", textAlign: "center" }}>
         <div className="container">
 
           <h1 className="home-headline" style={{
