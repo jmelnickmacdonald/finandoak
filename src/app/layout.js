@@ -120,17 +120,14 @@ export default function RootLayout({ children }) {
               </div>
             </div>
 
+            {/* Raven House venture credit */}
             <div className="footer-venture">
-              <Link href="/ravenhouse" style={{
-                fontFamily: "var(--font-display-loaded), Georgia, serif",
-                fontStyle: "italic",
-                fontSize: "0.95rem",
-                color: "var(--caramel)",
-                letterSpacing: "0.02em",
-                textDecoration: "none",
-              }}>
-                a Raven House venture
-              </Link>
+              <Link href="/ravenhouse">a Raven House venture</Link>
+            </div>
+
+            {/* Yellow Front Door credit — plain text */}
+            <div className="footer-poweredby">
+              Powered by The Yellow Front Door
             </div>
 
             <div className="footer-bottom">
