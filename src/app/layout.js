@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
           Opening July 2026 · Annapolis Valley, Nova Scotia
         </div>
 
-        <header style={{ background: "var(--cream)" }}>
+        <header className="site-header" style={{ background: "var(--cream)" }}>
           <div style={{
             textAlign: "center",
             padding: "1.5rem var(--gutter)",
@@ -120,12 +120,10 @@ export default function RootLayout({ children }) {
               </div>
             </div>
 
-            {/* Raven House venture credit */}
             <div className="footer-venture">
               <Link href="/ravenhouse">a Raven House venture</Link>
             </div>
 
-            {/* Yellow Front Door credit — plain text */}
             <div className="footer-poweredby">
               Powered by The Yellow Front Door
             </div>
