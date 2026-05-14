@@ -12,12 +12,11 @@ export default function Home() {
         />
       </section>
 
-      {/* HEADLINE + SIGNATURE — paired as one composition */}
+      {/* HEADLINE + SIGNATURE */}
       <section className="section section-cream" style={{ paddingTop: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)", textAlign: "center" }}>
         <div className="container">
 
-          {/* Headline */}
-          <h1 style={{
+          <h1 className="home-headline" style={{
             fontFamily: "var(--font-display)",
             fontStyle: "italic",
             fontWeight: 400,
@@ -28,13 +27,12 @@ export default function Home() {
             margin: "0 auto",
             maxWidth: "18ch",
           }}>
-            <span style={{ display: "block" }}>Small batches.</span>
-            <span style={{ display: "block", color: "var(--coastal-blue)" }}>Big messes.</span>
-            <span style={{ display: "block" }}>Happy critters.</span>
+            <span className="home-headline-line">Small batches.</span>
+            <span className="home-headline-line" style={{ color: "var(--coastal-blue)" }}>Big messes.</span>
+            <span className="home-headline-line">Happy critters.</span>
           </h1>
 
-          {/* Sub */}
-          <p style={{
+          <p className="home-headline-sub" style={{
             fontFamily: "var(--font-body)",
             fontWeight: 300,
             fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
@@ -47,7 +45,6 @@ export default function Home() {
             the heart of the Annapolis Valley.
           </p>
 
-          {/* Small rule to separate headline group from signature group */}
           <div style={{
             width: "40px",
             height: "1px",
@@ -56,7 +53,6 @@ export default function Home() {
             margin: "0 auto clamp(2.5rem, 4vw, 3.5rem)",
           }} />
 
-          {/* Signature moment — h2 + xoxo signoff, tightly paired */}
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontStyle: "italic",
@@ -77,7 +73,6 @@ export default function Home() {
             />
           </div>
 
-          {/* CTAs — visually separated from the signature group */}
           <div style={{
             display: "inline-flex",
             gap: "1.5rem",
@@ -103,7 +98,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PILLARS — Coastal Blue, stamps as marks */}
       <section className="section section-blue">
         <div className="container">
           <div className="section-eyebrow">The non-negotiables</div>
@@ -144,7 +138,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SIGNUP */}
       <section id="signup" className="section section-cream" style={{ textAlign: "center" }}>
         <div className="content">
           <div className="section-eyebrow">First in line</div>
