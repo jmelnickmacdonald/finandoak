@@ -117,7 +117,7 @@ button {
   font-weight: 700;
 }
 
-/* ---------- HEADER (legacy class — keep for any existing usage) ---------- */
+/* ---------- HEADER (legacy class — kept for any existing usage) ---------- */
 .header {
   background: var(--cream);
   padding: 1.5rem var(--gutter) 1rem;
@@ -136,27 +136,9 @@ button {
   height: auto;
 }
 
-/* ---------- SITE HEADER (with paw watermark) ---------- */
+/* ---------- SITE HEADER (clean, no watermark) ---------- */
 .site-header {
   position: relative;
-  overflow: hidden;
-}
-
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('/paw-pattern.png');
-  background-repeat: repeat;
-  background-size: 280px 280px;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.site-header > * {
-  position: relative;
-  z-index: 1;
 }
 
 /* ---------- NAV ---------- */
@@ -201,6 +183,29 @@ button {
 
 .container { max-width: var(--max-width); margin: 0 auto; }
 .content { max-width: var(--content-width); margin: 0 auto; }
+
+/* ---------- HEADLINE SECTION (with paw watermark behind text) ---------- */
+.headline-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.headline-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/paw-pattern.png');
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.headline-section > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* ---------- HERO ---------- */
 .hero {
@@ -585,14 +590,10 @@ button {
 }
 
 @media (max-width: 640px) {
-  body { font-size: 16px; }
-  .nav-inner { gap: 0; }
-  .nav a { padding: 0.85rem 1rem; font-size: 0.75rem; }
-  .header-logo { max-width: 220px; }
+  .rh-strip-item img { height: 240px; }
 }
 
 /* ---------- HEADLINE REVEAL ANIMATION ---------- */
-
 .home-headline-line,
 .home-headline-sub {
   display: block;
@@ -621,4 +622,12 @@ button {
     transform: none;
     animation: none;
   }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .nav-inner { gap: 0; }
+  .nav a { padding: 0.85rem 1rem; font-size: 0.75rem; }
+  .header-logo { max-width: 220px; }
 }
