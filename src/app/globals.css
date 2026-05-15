@@ -197,7 +197,7 @@ button {
   background-image: url('/paw-pattern.png');
   background-repeat: repeat;
   background-size: 320px 320px;
-  opacity: 0.05;
+  opacity: 0.25;
   pointer-events: none;
   z-index: 0;
 }
