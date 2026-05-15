@@ -75,7 +75,6 @@ export default function Story() {
             day.
           </p>
 
-          {/* Willow's team */}
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontSize: "1.75rem",
@@ -98,7 +97,6 @@ export default function Story() {
             before remembering what it&rsquo;s for. The animals supervise.
           </p>
 
-          {/* About the name */}
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontSize: "1.75rem",
@@ -123,7 +121,6 @@ export default function Story() {
             standard here, I tell you.
           </p>
 
-          {/* FIN PHOTO: portrait in the shade */}
           <figure style={{
             margin: "2rem auto 2.5rem",
             maxWidth: "70%",
@@ -160,7 +157,6 @@ export default function Story() {
             family.
           </p>
 
-          {/* OAK PHOTO: with Eliot */}
           <figure style={{
             margin: "2rem auto 2.5rem",
             maxWidth: "70%",
@@ -183,7 +179,6 @@ export default function Story() {
             </figcaption>
           </figure>
 
-          {/* About Piper */}
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontSize: "1.75rem",
@@ -208,7 +203,6 @@ export default function Story() {
             up on you for a hug, just the way Willow likes!
           </p>
 
-          {/* PIPER PHOTO: in the snow */}
           <figure style={{
             margin: "0 auto 2.5rem",
             maxWidth: "70%",
@@ -233,7 +227,7 @@ export default function Story() {
         </div>
       </section>
 
-      {/* THREE PILLARS */}
+      {/* THREE PILLARS — now using stamps instead of ear graphics */}
       <section className="section section-warm">
         <div className="container">
           <div className="section-eyebrow">What this brand is about</div>
@@ -243,7 +237,7 @@ export default function Story() {
 
           <div className="pillars">
             <div className="pillar">
-              <img src="/ears/ear-01.svg" alt="" className="pillar-ear" />
+              <img src="/dogstamp.png" alt="" className="pillar-stamp" />
               <h3>Made by hand, in a real kitchen.</h3>
               <p>
                 Not a factory and not a co-packer. An actual kitchen, in an
@@ -251,7 +245,7 @@ export default function Story() {
               </p>
             </div>
             <div className="pillar">
-              <img src="/ears/ear-07.svg" alt="" className="pillar-ear" />
+              <img src="/catstamp.png" alt="" className="pillar-stamp" />
               <h3>Tested by a thorough and committed team of testers.</h3>
               <p>
                 Two dogs, six cats, and a few chickens &mdash; who may not be the
@@ -261,7 +255,7 @@ export default function Story() {
               </p>
             </div>
             <div className="pillar">
-              <img src="/ears/ear-12.svg" alt="" className="pillar-ear" />
+              <img src="/horsestamp.png" alt="" className="pillar-stamp" />
               <h3>You&rsquo;ll know what&rsquo;s in it.</h3>
               <p>
                 Every ingredient on the package and every reason why it&rsquo;s
@@ -277,8 +271,8 @@ export default function Story() {
         <div className="content">
           <div style={{ maxWidth: "240px", margin: "0 auto" }}>
             <img
-              src="/willow-and-mom.png"
-              alt="— Willow & Mom"
+              src="/xowillowandmom.png"
+              alt="xo, Willow & Mom"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
