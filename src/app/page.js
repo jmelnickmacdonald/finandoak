@@ -12,7 +12,7 @@ export default function Home() {
         />
       </section>
 
-      {/* HEADLINE + SIGNATURE — now with watermark behind it */}
+      {/* HEADLINE + SIGNATURE */}
       <section className="section section-cream headline-section" style={{ paddingTop: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)", textAlign: "center" }}>
         <div className="container">
 
@@ -28,7 +28,18 @@ export default function Home() {
             maxWidth: "18ch",
           }}>
             <span className="home-headline-line">Small batches.</span>
-            <span className="home-headline-line" style={{ color: "var(--coastal-blue)" }}>Big messes.</span>
+            <span className="home-headline-line" style={{
+              fontFamily: "var(--font-body)",
+              fontStyle: "normal",
+              fontWeight: 900,
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
+              color: "var(--coastal-blue)",
+              fontSize: "0.78em",
+              display: "block",
+              lineHeight: 1.1,
+              padding: "0.15em 0",
+            }}>Big Messes.</span>
             <span className="home-headline-line">Happy critters.</span>
           </h1>
 
@@ -38,11 +49,12 @@ export default function Home() {
             fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
             lineHeight: 1.65,
             color: "var(--muted-ink)",
-            maxWidth: "48ch",
+            maxWidth: "52ch",
             margin: "clamp(1.5rem, 3vw, 2rem) auto clamp(3rem, 5vw, 4rem)",
           }}>
-            Handmade treats for dogs and cats from a mom-and-daughter bakery in
-            the heart of the Annapolis Valley.
+            Handmade treats for dogs, cats, and the rest of the menagerie
+            from a mom-and-daughter bakery in the heart of the Annapolis
+            Valley.
           </p>
 
           <div style={{
