@@ -1,6 +1,49 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+
+const BREVO_FORM_URL = "https://d90ea7a6.sibforms.com/serve/MUIFAApk1BZ-DkGbkiMmLTPPayJCgPOsPLcp2iKo3JAdM3QCsKNMZtCIBl61c2AhfSxV64MTXF1Mb9sK7GQiNcwRyotUdJmFnK98Xx9NBBrMlw1xsj6yFwbQSrdcUmg6ALmjdKuUHCQhlfcWvd9Aq8M_dBDicLaraMRMLJDLdVx16gILIIdeC14Ewg89-9FP6K9tKtnRqUGdvmMMXw==";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMsg("");
+
+    // Basic email validation
+    const trimmed = email.trim();
+    if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+      setStatus("error");
+      setErrorMsg("Please enter a valid email address.");
+      return;
+    }
+
+    setStatus("submitting");
+
+    try {
+      const formData = new FormData();
+      formData.append("EMAIL", trimmed);
+      formData.append("email_address_check", "");
+      formData.append("locale", "en");
+
+      await fetch(BREVO_FORM_URL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      });
+
+      setStatus("success");
+      setEmail("");
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <>
       {/* PANORAMA HERO */}
@@ -38,15 +81,14 @@ export default function Home() {
             fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
             lineHeight: 1.65,
             color: "var(--muted-ink)",
-            maxWidth: "52ch",
+            maxWidth: "44ch",
             margin: "clamp(1.5rem, 3vw, 2rem) auto clamp(3rem, 5vw, 4rem)",
           }}>
             Handmade treats for dogs, cats, and the rest of the menagerie
-            from a mom-and-daughter bakery in the heart of the Annapolis
-            Valley.
+            &mdash; from a mom-and-daughter bakery in the heart of the
+            Annapolis Valley.
           </p>
 
-          {/* Divider — strengthened from previous version */}
           <div style={{
             width: "80px",
             height: "2px",
@@ -69,8 +111,8 @@ export default function Home() {
 
           <div style={{ maxWidth: "340px", margin: "0 auto clamp(2.5rem, 4vw, 3.5rem)" }}>
             <img
-              src="/xowillowandmom.png"
-              alt="xo, Willow & Mom"
+              src="/xowillowandjulianna.png"
+              alt="xo, Willow & Julianna"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -100,6 +142,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* THE NON-NEGOTIABLES — Coastal Blue */}
       <section className="section section-blue">
         <div className="container">
           <div className="section-eyebrow">The non-negotiables</div>
@@ -140,36 +183,96 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="signup" className="section section-cream" style={{ textAlign: "center" }}>
+      {/* QUOTE CARD — Just One Treat */}
+      <section className="section section-cream" style={{ paddingTop: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)", textAlign: "center" }}>
+        <div className="container" style={{ maxWidth: "720px" }}>
+          <img
+            src="/justonetreat.png"
+            alt="You said 'just one treat.' We both know you're lying. xo, Willow & Julianna"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
+      </section>
+
+      {/* SIGNUP */}
+      <section id="signup" className="section section-cream" style={{ textAlign: "center", paddingTop: "1rem" }}>
         <div className="content">
           <div className="section-eyebrow">First in line</div>
           <h2 className="section-title">
             Want to <em>know</em> when treats are ready?
           </h2>
-          <p className="section-lead">
-            Drop your email and you&rsquo;ll be among the first to hear when the
-            bakery opens in July 2026. No spam, we promise!
-          </p>
-          <p style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            fontSize: "1.05rem",
-            color: "var(--caramel)",
-            margin: "0 auto 2rem",
-            maxWidth: "36rem",
-          }}>
-            Give your pup a pet from us.
-          </p>
-          <div className="signup">
-            <input
-              type="email"
-              placeholder="your email, please"
-              aria-label="Email address"
-            />
-            <button className="btn btn-primary" type="button">
-              Tell Me When
-            </button>
-          </div>
+
+          {status === "success" ? (
+            <div style={{
+              maxWidth: "32rem",
+              margin: "2rem auto 0",
+              padding: "1.5rem 1.5rem 1.75rem",
+              background: "var(--cream-warm)",
+              border: "1.5px solid var(--caramel)",
+              borderRadius: "8px",
+              textAlign: "center",
+            }}>
+              <p style={{
+                fontFamily: "var(--font-display)",
+                fontStyle: "italic",
+                fontSize: "1.2rem",
+                lineHeight: 1.5,
+                color: "var(--soft-ink)",
+                margin: 0,
+              }}>
+                You&rsquo;re on the list. We&rsquo;ll be in touch the moment
+                treats are ready. Now go give your critters a pet for us.
+              </p>
+            </div>
+          ) : (
+            <>
+              <p className="section-lead">
+                Drop your email and you&rsquo;ll be among the first to hear when the
+                bakery opens in July 2026. No spam, we promise!
+              </p>
+              <p style={{
+                fontFamily: "var(--font-display)",
+                fontStyle: "italic",
+                fontSize: "1.05rem",
+                color: "var(--caramel)",
+                margin: "0 auto 2rem",
+                maxWidth: "36rem",
+              }}>
+                Give your pup a pet from us.
+              </p>
+              <form onSubmit={handleSubmit} className="signup" noValidate>
+                <input
+                  type="email"
+                  placeholder="your email, please"
+                  aria-label="Email address"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (status === "error") setStatus("idle");
+                  }}
+                  disabled={status === "submitting"}
+                  required
+                />
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                  disabled={status === "submitting"}
+                >
+                  {status === "submitting" ? "Sending..." : "Tell Me When"}
+                </button>
+              </form>
+              {status === "error" && errorMsg && (
+                <p style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.9rem",
+                  color: "#c0392b",
+                  marginTop: "1rem",
+                }}>
+                  {errorMsg}
+                </p>
+              )}
+            </>
+          )}
         </div>
       </section>
     </>
