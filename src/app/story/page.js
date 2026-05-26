@@ -227,7 +227,7 @@ export default function Story() {
         </div>
       </section>
 
-      {/* THREE PILLARS — now using stamps instead of ear graphics */}
+      {/* THREE PILLARS */}
       <section className="section section-warm">
         <div className="container">
           <div className="section-eyebrow">What this brand is about</div>
@@ -266,16 +266,25 @@ export default function Story() {
         </div>
       </section>
 
-      {/* SIGNATURE */}
-      <section className="section section-cream" style={{ textAlign: "center", paddingTop: "2rem" }}>
+      {/* SIGNATURE + sign-off */}
+      <section className="section section-cream" style={{ textAlign: "center", paddingTop: "2rem", paddingBottom: "4rem" }}>
         <div className="content">
-          <div style={{ maxWidth: "240px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "240px", margin: "0 auto 1.5rem" }}>
             <img
               src="/xowillowandmom.png"
               alt="xo, Willow & Mom"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
+          <p style={{
+            fontFamily: "var(--font-display)",
+            fontStyle: "italic",
+            fontSize: "1.1rem",
+            color: "var(--caramel)",
+            margin: 0,
+          }}>
+            Tell your dog we said hi.
+          </p>
         </div>
       </section>
     </>
