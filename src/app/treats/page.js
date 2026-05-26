@@ -3,23 +3,23 @@ import Link from "next/link";
 export default function Treats() {
   return (
     <>
-      {/* HERO */}
-      <section className="section section-cream" style={{ paddingTop: "5rem", paddingBottom: "3rem", textAlign: "center" }}>
+      {/* HERO — tightened bottom padding */}
+      <section className="section section-cream" style={{ paddingTop: "5rem", paddingBottom: "1.5rem", textAlign: "center" }}>
         <div className="container">
           <div className="hero-eyebrow">Treats</div>
           <h1 className="section-title" style={{ fontSize: "clamp(2.5rem, 5vw, 3.25rem)", maxWidth: "20ch", margin: "0 auto 1rem" }}>
             Real ingredients.<br /><em>Spoiled regulars.</em>
           </h1>
-          <p className="section-lead">
+          <p className="section-lead" style={{ marginBottom: "0" }}>
             Small-batch treats for dogs and cats, made by hand, with ingredients
-            we&rsquo;d happily feed our own crew. Given the size of our crew,
-            that&rsquo;s a higher bar than it sounds.
+            we&rsquo;d happily feed our own crew. Given the size of the critter
+            population here, that&rsquo;s a higher bar than it sounds.
           </p>
         </div>
       </section>
 
-      {/* CATEGORIES — cream background, with stamps */}
-      <section className="section section-cream">
+      {/* CATEGORIES — tightened top padding */}
+      <section className="section section-cream" style={{ paddingTop: "2.5rem" }}>
         <div className="container">
           <div className="section-eyebrow">What we make</div>
           <h2 className="section-title">
@@ -87,6 +87,16 @@ export default function Treats() {
           <p className="section-lead">
             Drop your email and you&rsquo;ll be among the first to hear when the
             bakery opens in July 2026. No spam. We promise.
+          </p>
+          <p style={{
+            fontFamily: "var(--font-display)",
+            fontStyle: "italic",
+            fontSize: "1.05rem",
+            color: "var(--caramel)",
+            margin: "0 auto 2rem",
+            maxWidth: "36rem",
+          }}>
+            Tell your dog he&rsquo;s the best boy ever from us.
           </p>
           <div className="signup">
             <input type="email" placeholder="your email, please" aria-label="Email address" />
