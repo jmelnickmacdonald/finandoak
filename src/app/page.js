@@ -28,18 +28,7 @@ export default function Home() {
             maxWidth: "18ch",
           }}>
             <span className="home-headline-line">Small batches.</span>
-            <span className="home-headline-line" style={{
-              fontFamily: "var(--font-body)",
-              fontStyle: "normal",
-              fontWeight: 900,
-              textTransform: "uppercase",
-              letterSpacing: "0.04em",
-              color: "var(--coastal-blue)",
-              fontSize: "0.78em",
-              display: "block",
-              lineHeight: 1.1,
-              padding: "0.15em 0",
-            }}>Big Messes.</span>
+            <span className="home-headline-line" style={{ color: "var(--coastal-blue)" }}>Big messes.</span>
             <span className="home-headline-line">Happy critters.</span>
           </h1>
 
@@ -57,11 +46,12 @@ export default function Home() {
             Valley.
           </p>
 
+          {/* Divider — strengthened from previous version */}
           <div style={{
-            width: "40px",
-            height: "1px",
+            width: "80px",
+            height: "2px",
             background: "var(--caramel)",
-            opacity: 0.4,
+            opacity: 0.7,
             margin: "0 auto clamp(2.5rem, 4vw, 3.5rem)",
           }} />
 
@@ -159,6 +149,16 @@ export default function Home() {
           <p className="section-lead">
             Drop your email and you&rsquo;ll be among the first to hear when the
             bakery opens in July 2026. No spam, we promise!
+          </p>
+          <p style={{
+            fontFamily: "var(--font-display)",
+            fontStyle: "italic",
+            fontSize: "1.05rem",
+            color: "var(--caramel)",
+            margin: "0 auto 2rem",
+            maxWidth: "36rem",
+          }}>
+            Give your pup a pet from us.
           </p>
           <div className="signup">
             <input
