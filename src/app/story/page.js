@@ -273,7 +273,7 @@ export default function Story() {
             <img
               src="/xowillowandjulianna.png"
               alt="xo, Willow & Julianna"
-              style={{ width: "100%", height: "auto", display: "block" }}
+              style={{ width: "250%", height: "auto", display: "block" }}
             />
           </div>
           <p style={{
