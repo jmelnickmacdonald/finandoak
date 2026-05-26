@@ -7,14 +7,13 @@ const BREVO_FORM_URL = "https://d90ea7a6.sibforms.com/serve/MUIFAApk1BZ-DkGbkiMm
 
 export default function Home() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
+  const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMsg("");
 
-    // Basic email validation
     const trimmed = email.trim();
     if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
       setStatus("error");
@@ -183,19 +182,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* QUOTE CARD — Just One Treat */}
-      <section className="section section-cream" style={{ paddingTop: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "720px" }}>
-          <img
-            src="/justonetreat.png"
-            alt="You said 'just one treat.' We both know you're lying. xo, Willow & Julianna"
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
-      </section>
-
       {/* SIGNUP */}
-      <section id="signup" className="section section-cream" style={{ textAlign: "center", paddingTop: "1rem" }}>
+      <section id="signup" className="section section-cream" style={{ textAlign: "center" }}>
         <div className="content">
           <div className="section-eyebrow">First in line</div>
           <h2 className="section-title">
