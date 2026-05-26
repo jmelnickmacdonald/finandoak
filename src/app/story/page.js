@@ -266,14 +266,14 @@ export default function Story() {
         </div>
       </section>
 
-      {/* SIGNATURE + sign-off */}
+      {/* SIGNATURE + sign-off — signature bumped to 340px to match homepage */}
       <section className="section section-cream" style={{ textAlign: "center", paddingTop: "2rem", paddingBottom: "4rem" }}>
         <div className="content">
-          <div style={{ maxWidth: "240px", margin: "0 auto 1.5rem" }}>
+          <div style={{ maxWidth: "340px", margin: "0 auto 1.5rem" }}>
             <img
               src="/xowillowandjulianna.png"
               alt="xo, Willow & Julianna"
-              style={{ width: "350%", height: "auto", display: "block" }}
+              style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
           <p style={{
