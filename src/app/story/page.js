@@ -57,7 +57,7 @@ export default function Story() {
           </figure>
 
           <p style={{ marginBottom: "1.25rem", fontSize: "1.05rem", lineHeight: 1.75 }}>
-            Mom and Willow have been talking about a pet treat business since
+            Julianna and Willow have been talking about a pet treat business since
             Willow was six. They&rsquo;d float ideas, sketch out names, go
             through efforts to craft logos, get a little serious about it, and
             then dinner would happen &mdash; or homework, or a laptop battery
@@ -227,7 +227,7 @@ export default function Story() {
         </div>
       </section>
 
-      {/* THREE PILLARS */}
+      {/* THREE PILLARS — UNCHANGED, original ear-graphic version */}
       <section className="section section-warm">
         <div className="container">
           <div className="section-eyebrow">What this brand is about</div>
@@ -237,7 +237,7 @@ export default function Story() {
 
           <div className="pillars">
             <div className="pillar">
-              <img src="/dogstamp.png" alt="" className="pillar-stamp" />
+              <img src="/ears/ear-01.svg" alt="" className="pillar-ear" />
               <h3>Made by hand, in a real kitchen.</h3>
               <p>
                 Not a factory and not a co-packer. An actual kitchen, in an
@@ -245,7 +245,7 @@ export default function Story() {
               </p>
             </div>
             <div className="pillar">
-              <img src="/catstamp.png" alt="" className="pillar-stamp" />
+              <img src="/ears/ear-07.svg" alt="" className="pillar-ear" />
               <h3>Tested by a thorough and committed team of testers.</h3>
               <p>
                 Two dogs, six cats, and a few chickens &mdash; who may not be the
@@ -255,7 +255,7 @@ export default function Story() {
               </p>
             </div>
             <div className="pillar">
-              <img src="/horsestamp.png" alt="" className="pillar-stamp" />
+              <img src="/ears/ear-12.svg" alt="" className="pillar-ear" />
               <h3>You&rsquo;ll know what&rsquo;s in it.</h3>
               <p>
                 Every ingredient on the package and every reason why it&rsquo;s
@@ -271,8 +271,8 @@ export default function Story() {
         <div className="content">
           <div style={{ maxWidth: "240px", margin: "0 auto 1.5rem" }}>
             <img
-              src="/xowillowandmom.png"
-              alt="xo, Willow & Mom"
+              src="/xowillowandjulianna.png"
+              alt="xo, Willow & Julianna"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
