@@ -1,4 +1,4 @@
-\/* ============================================
+/* ============================================
    FIN & OAK BARK BAKERY — GLOBAL STYLES
    ============================================ */
 
@@ -117,7 +117,7 @@ button {
   font-weight: 700;
 }
 
-/* ---------- HEADER (legacy class — kept for any existing usage) ---------- */
+/* ---------- HEADER (legacy class) ---------- */
 .header {
   background: var(--cream);
   padding: 1.5rem var(--gutter) 1rem;
@@ -136,7 +136,7 @@ button {
   height: auto;
 }
 
-/* ---------- SITE HEADER (clean, no watermark) ---------- */
+/* ---------- SITE HEADER ---------- */
 .site-header {
   position: relative;
 }
@@ -183,29 +183,6 @@ button {
 
 .container { max-width: var(--max-width); margin: 0 auto; }
 .content { max-width: var(--content-width); margin: 0 auto; }
-
-/* ---------- HEADLINE SECTION (with paw watermark behind text) ---------- */
-.headline-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.headline-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('/paw-pattern.png');
-  background-repeat: repeat;
-  background-size: 320px 320px;
-  opacity: 0.0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.headline-section > * {
-  position: relative;
-  z-index: 1;
-}
 
 /* ---------- HERO ---------- */
 .hero {
