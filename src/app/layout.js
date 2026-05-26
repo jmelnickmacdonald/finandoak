@@ -96,7 +96,20 @@ export default function RootLayout({ children }) {
         <footer className="footer">
           <div className="footer-inner">
             <div className="footer-top">
-              <div className="footer-script">made by hand.</div>
+              <div style={{
+                maxWidth: "320px",
+                margin: "0 auto 1rem",
+              }}>
+                <img
+                  src="/madebyhand.png"
+                  alt="Made by hand"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
               <div className="footer-tagline">Small batches. Big messes. Happy critters.</div>
             </div>
 
