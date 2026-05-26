@@ -39,7 +39,7 @@ export default function FindUs() {
             some sheep before you&rsquo;ll pass half as many humans.
           </p>
 
-          {/* Farm stand photos — side by side on desktop, stacked on mobile */}
+          {/* Farm stand photos */}
           <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
@@ -116,17 +116,14 @@ export default function FindUs() {
           <h2 style={{
             fontFamily: "var(--font-display)",
             fontStyle: "italic",
-            fontSize: "clamp(1.75rem, 3.5vw, 2.25rem)",
-            fontWeight: 500,
+            fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
+            fontWeight: 400,
             lineHeight: 1.3,
             color: "var(--cream)",
-            marginBottom: "1rem",
+            margin: 0,
           }}>
-            Small batches. Big messes. Happy critters.
+            Real ingredients. <em style={{ color: "var(--apple-leaf-light)" }}>Spoiled regulars.</em>
           </h2>
-          <div className="hero-script" style={{ color: "var(--caramel-light)", fontSize: "clamp(2rem, 4.5vw, 3rem)", marginBottom: 0 }}>
-            What&rsquo;s better than that?
-          </div>
         </div>
       </section>
     </>
