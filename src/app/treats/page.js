@@ -102,18 +102,7 @@ export default function Treats() {
         </div>
       </section>
 
-      {/* QUOTE CARD — Cat is in Charge */}
-      <section className="section section-cream" style={{ paddingTop: "clamp(3rem, 6vw, 5rem)", paddingBottom: "clamp(3rem, 6vw, 5rem)", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "720px" }}>
-          <img
-            src="/thecatisincharge.png"
-            alt="Reminder: the cat is in charge. We're just renters here. xo, Willow & Julianna"
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
-      </section>
-
-      {/* SAGE BANNER — widow fix */}
+      {/* SAGE BANNER */}
       <section className="section section-sage" style={{ textAlign: "center" }}>
         <div className="content">
           <h2 style={{
