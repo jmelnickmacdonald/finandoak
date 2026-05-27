@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Playfair_Display, Lato } from "next/font/google";
 import Link from "next/link";
+import Script from "next/script";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -78,6 +79,7 @@ export default function RootLayout({ children }) {
               padding: "0 var(--gutter)",
               display: "flex",
               justifyContent: "center",
+              alignItems: "center",
               flexWrap: "wrap",
               gap: 0,
             }}>
@@ -87,6 +89,17 @@ export default function RootLayout({ children }) {
               <Link href="/journal" style={navLinkStyle}>Journal</Link>
               <Link href="/find-us" style={navLinkStyle}>Find Us</Link>
               <Link href="/ravenhouse" style={navLinkStyle}>Raven House</Link>
+              <button
+                className="snipcart-checkout nav-cart-button"
+                aria-label="Open cart"
+                style={navCartButtonStyle}
+              >
+                Cart
+                <span
+                  className="snipcart-items-count nav-cart-count"
+                  aria-hidden="true"
+                ></span>
+              </button>
             </div>
           </nav>
         </header>
@@ -147,6 +160,26 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
+
+        {/* ===== SNIPCART CART MOUNT ===== */}
+        {/* The hidden #snipcart div is where Snipcart renders its UI. */}
+        <div hidden id="snipcart" data-api-key="NjBmZjcyOWUtZGQ0Ny00NzA0LWI5MDUtMTgwOGE3ZGY1NzcxNjM5MTU1MjExOTkzMzE4MzM1"></div>
+
+        {/* ===== SNIPCART LOADER ===== */}
+        {/* Settings: CAD currency, side-drawer cart, lazy-load on user interaction.
+            Pinned to v3.7.1 so future Snipcart updates can't break our styling. */}
+        <Script id="snipcart-settings" strategy="afterInteractive">
+          {`
+            window.SnipcartSettings = {
+              publicApiKey: "NjBmZjcyOWUtZGQ0Ny00NzA0LWI5MDUtMTgwOGE3ZGY1NzcxNjM5MTU1MjExOTkzMzE4MzM1",
+              loadStrategy: "on-user-interaction",
+              currency: "cad",
+              modalStyle: "side",
+              version: "3.7.1"
+            };
+            (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(\`src[src^="\${window.SnipcartSettings.protocol}://\${window.SnipcartSettings.domain}"][src$="snipcart.js"]\`),n=document.querySelector(\`link[href^="\${window.SnipcartSettings.protocol}://\${window.SnipcartSettings.domain}"][href$="snipcart.css"]\`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=\`\${window.SnipcartSettings.protocol}://\${window.SnipcartSettings.domain}/themes/v\${window.SnipcartSettings.version}/default/snipcart.js\`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=\`\${window.SnipcartSettings.protocol}://\${window.SnipcartSettings.domain}/themes/v\${window.SnipcartSettings.version}/default/snipcart.css\`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+          `}
+        </Script>
       </body>
     </html>
   );
@@ -160,5 +193,23 @@ const navLinkStyle = {
   textTransform: "uppercase",
   fontWeight: 400,
   color: "var(--cream)",
+  transition: "color 0.2s ease",
+};
+
+const navCartButtonStyle = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "0.5rem",
+  padding: "1rem 1.5rem",
+  fontSize: "0.78rem",
+  letterSpacing: "0.2em",
+  textTransform: "uppercase",
+  fontWeight: 400,
+  color: "var(--cream)",
+  background: "transparent",
+  border: "none",
+  borderLeft: "1px solid rgba(255, 253, 249, 0.18)",
+  cursor: "pointer",
+  fontFamily: "inherit",
   transition: "color 0.2s ease",
 };
