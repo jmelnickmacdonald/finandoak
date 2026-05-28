@@ -1,207 +1,119 @@
-"use client";
-
+// src/app/treats/page.js
 import Link from "next/link";
-import { useState } from "react";
+import { products } from "../products";
 
-const BREVO_FORM_URL = "https://d90ea7a6.sibforms.com/serve/MUIFAApk1BZ-DkGbkiMmLTPPayJCgPOsPLcp2iKo3JAdM3QCsKNMZtCIBl61c2AhfSxV64MTXF1Mb9sK7GQiNcwRyotUdJmFnK98Xx9NBBrMlw1xsj6yFwbQSrdcUmg6ALmjdKuUHCQhlfcWvd9Aq8M_dBDicLaraMRMLJDLdVx16gILIIdeC14Ewg89-9FP6K9tKtnRqUGdvmMMXw==";
+export const metadata = {
+  title: "Treats — Fin & Oak Bark Bakery",
+  description:
+    "A small line of handmade treats for dogs, cats, and horses. Baked in small batches in Meadowvale, Nova Scotia.",
+};
 
-export default function Treats() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("idle");
-  const [errorMsg, setErrorMsg] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setErrorMsg("");
-
-    const trimmed = email.trim();
-    if (!trimmed || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
-      setStatus("error");
-      setErrorMsg("Please enter a valid email address.");
-      return;
-    }
-
-    setStatus("submitting");
-
-    try {
-      const formData = new FormData();
-      formData.append("EMAIL", trimmed);
-      formData.append("email_address_check", "");
-      formData.append("locale", "en");
-
-      await fetch(BREVO_FORM_URL, {
-        method: "POST",
-        body: formData,
-        mode: "no-cors",
-      });
-
-      setStatus("success");
-      setEmail("");
-    } catch (err) {
-      setStatus("error");
-      setErrorMsg("Something went wrong. Please try again.");
-    }
-  };
+export default function TreatsPage() {
+  const dogs = products.filter((p) => p.category === "dogs");
+  const cats = products.filter((p) => p.category === "cats");
+  const mixed = products.filter((p) => p.category === "mixed");
+  const horses = products.filter((p) => p.category === "horses");
 
   return (
-    <>
-      {/* HERO */}
-      <section className="section section-cream" style={{ paddingTop: "5rem", paddingBottom: "1.5rem", textAlign: "center" }}>
-        <div className="container">
-          <div className="hero-eyebrow">Treats</div>
-          <h1 className="section-title" style={{ fontSize: "clamp(2.5rem, 5vw, 3.25rem)", maxWidth: "20ch", margin: "0 auto 1rem" }}>
-            Real ingredients.<br /><em>Spoiled regulars.</em>
+    <main className="treats-page">
+      {/* ─── Hero ─── */}
+      <section className="treats-hero">
+        <div className="treats-hero-inner">
+          <p className="eyebrow">The Menu</p>
+          <h1 className="treats-headline">
+            A small line, <em>baked thoughtfully.</em>
           </h1>
-          <p className="section-lead" style={{ marginBottom: "0" }}>
-            Small-batch treats for dogs and cats, made by hand, with ingredients
-            we&rsquo;d happily feed our own crew. Given the size of the critter
-            population here, that&rsquo;s a higher bar than it sounds.
+          <p className="treats-lead">
+            Six recipes to start. Made by hand in small batches, from
+            real ingredients, in our home kitchen at Raven House.
+          </p>
+          <p className="treats-disclosure">
+            A preview menu. Final recipes, prices, and packaging confirmed
+            closer to our July 2026 launch.
           </p>
         </div>
       </section>
 
-      {/* CATEGORIES */}
-      <section className="section section-cream" style={{ paddingTop: "2.5rem" }}>
-        <div className="container">
-          <div className="section-eyebrow">What we make</div>
-          <h2 className="section-title">
-            Coming <em>July 2026.</em>
-          </h2>
-
-          <div className="pillars">
-            <div className="pillar">
-              <img src="/dogstamp.png" alt="" className="pillar-stamp" />
-              <h3>For Dogs</h3>
-              <p>
-                Biscuits, training treats, every time you pass them in the
-                living room and they stare at you with those sweet little
-                puppy dogs eyes... you know, the everyday stuff. (Only
-                joking... like all good things, in moderation of course.)
-                Baked for dogs whose humans don&rsquo;t cut corners.
-              </p>
-            </div>
-            <div className="pillar">
-              <img src="/catstamp.png" alt="" className="pillar-stamp" />
-              <h3>For Cats</h3>
-              <p>
-                Yes, them too. Whether they admit they want them or not.
-                These are taking some time to refine because... cats. Before
-                long, though, they&rsquo;ll be gracing our shelves and page.
-              </p>
-            </div>
-            <div className="pillar" style={{ opacity: 0.85 }}>
-              <img src="/horsestamp.png" alt="" className="pillar-stamp" />
-              <h3>For Horses</h3>
-              <p>
-                Coming soon. We&rsquo;re not stopping there, either. (At
-                least that&rsquo;s what the cows, pigs, goats, and chickens
-                told us.)
-              </p>
-            </div>
-          </div>
+      {/* ─── Dogs ─── */}
+      <section className="treats-section">
+        <div className="section-header">
+          <h2 className="section-title">For Dogs</h2>
+          <p className="section-sub">Three to start. A seasonal fourth coming in fall.</p>
+        </div>
+        <div className="product-grid">
+          {dogs.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </section>
 
-      {/* SAGE BANNER */}
-      <section className="section section-sage" style={{ textAlign: "center" }}>
-        <div className="content">
-          <h2 style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            fontSize: "clamp(1.5rem, 3vw, 2rem)",
-            fontWeight: 500,
-            lineHeight: 1.5,
-            color: "var(--soft-ink)",
-            maxWidth: "32ch",
-            margin: "0 auto",
-          }}>
-            Recipes built carefully and thoughtfully. Tested by an extensive
-            committee of in-house and on-farm critics.
-          </h2>
+      {/* ─── Cats ─── */}
+      <section className="treats-section treats-section--alt">
+        <div className="section-header">
+          <h2 className="section-title">For Cats</h2>
+          <p className="section-sub">One recipe. Tested by six in-house critics.</p>
+        </div>
+        <div className="product-grid product-grid--single">
+          {cats.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </section>
 
-      {/* SIGNUP */}
-      <section className="section section-cream" style={{ textAlign: "center" }}>
-        <div className="content">
-          <div className="section-eyebrow">First in line</div>
-          <h2 className="section-title">
-            Want to <em>know</em> when treats are ready?
-          </h2>
-
-          {status === "success" ? (
-            <div style={{
-              maxWidth: "32rem",
-              margin: "2rem auto 0",
-              padding: "1.5rem 1.5rem 1.75rem",
-              background: "var(--cream-warm)",
-              border: "1.5px solid var(--caramel)",
-              borderRadius: "8px",
-              textAlign: "center",
-            }}>
-              <p style={{
-                fontFamily: "var(--font-display)",
-                fontStyle: "italic",
-                fontSize: "1.2rem",
-                lineHeight: 1.5,
-                color: "var(--soft-ink)",
-                margin: 0,
-              }}>
-                You&rsquo;re on the list. We&rsquo;ll be in touch the moment
-                treats are ready. Now go give your critters a pet for us.
-              </p>
-            </div>
-          ) : (
-            <>
-              <p className="section-lead">
-                Drop your email and you&rsquo;ll be among the first to hear when the
-                bakery opens in July 2026. No spam. We promise.
-              </p>
-              <p style={{
-                fontFamily: "var(--font-display)",
-                fontStyle: "italic",
-                fontSize: "1.05rem",
-                color: "var(--caramel)",
-                margin: "0 auto 2rem",
-                maxWidth: "36rem",
-              }}>
-                Tell your dog he&rsquo;s the best boy ever from us.
-              </p>
-              <form onSubmit={handleSubmit} className="signup" noValidate>
-                <input
-                  type="email"
-                  placeholder="your email, please"
-                  aria-label="Email address"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    if (status === "error") setStatus("idle");
-                  }}
-                  disabled={status === "submitting"}
-                  required
-                />
-                <button
-                  className="btn btn-primary"
-                  type="submit"
-                  disabled={status === "submitting"}
-                >
-                  {status === "submitting" ? "Sending..." : "Tell Me When"}
-                </button>
-              </form>
-              {status === "error" && errorMsg && (
-                <p style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.9rem",
-                  color: "#c0392b",
-                  marginTop: "1rem",
-                }}>
-                  {errorMsg}
-                </p>
-              )}
-            </>
-          )}
+      {/* ─── Mixed ─── */}
+      <section className="treats-section">
+        <div className="section-header">
+          <h2 className="section-title">For Both</h2>
+          <p className="section-sub">Single-ingredient. Allergy-friendly.</p>
+        </div>
+        <div className="product-grid product-grid--single">
+          {mixed.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </section>
-    </>
+
+      {/* ─── Horses ─── */}
+      <section className="treats-section treats-section--alt">
+        <div className="section-header">
+          <h2 className="section-title">For the Big Kids</h2>
+          <p className="section-sub">For horses, ponies, donkeys. Anyone at the fence.</p>
+        </div>
+        <div className="product-grid product-grid--single">
+          {horses.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* ─── Footer note ─── */}
+      <section className="treats-footnote">
+        <p>
+          Real ingredients. Spoiled regulars.
+        </p>
+      </section>
+    </main>
+  );
+}
+
+function ProductCard({ product }) {
+  return (
+    <Link href={`/treats/${product.slug}`} className="product-card">
+      <div className="product-card-image">
+        {/* Image placeholder — swap in real photos when ready */}
+        <div className="product-card-placeholder">
+          <span>{product.name}</span>
+        </div>
+      </div>
+      <div className="product-card-body">
+        <h3 className="product-card-name">{product.name}</h3>
+        <p className="product-card-tagline">{product.tagline}</p>
+        <p className="product-card-desc">{product.shortDescription}</p>
+        <div className="product-card-meta">
+          <span className="product-card-weight">{product.weight}</span>
+          <span className="product-card-price">${product.price.toFixed(2)}</span>
+        </div>
+      </div>
+    </Link>
   );
 }
