@@ -121,13 +121,13 @@ export const products = [
     name: "Carrot & Molasses Bites",
     tagline: "Made bigger, for bigger appetites.",
     category: "horses",
-    price: 14.00,
-    weight: "400g",
+    price: 11.00,
+    weight: "250g",
     image: "/horse.png",
     shortDescription:
       "Whole oats, fresh-grated carrot, and a swirl of molasses. Hand-shaped for the bigger appetites at the gate.",
     longDescription:
-      "Whole rolled oats, fresh-grated carrot, a generous spoon of molasses, and a little flour to hold them. The bag is twice the size of our dog treats, because we know who is eating them.",
+      "Whole rolled oats, fresh-grated carrot, a generous spoon of molasses, and a little flour to hold them. Hand-shaped into larger bites because horses do not do small.",
     ingredients: [
       "Whole rolled oats",
       "Whole-wheat flour",
