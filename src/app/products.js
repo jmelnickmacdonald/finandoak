@@ -14,7 +14,7 @@ export const products = [
     category: "dogs",
     price: 11.00,
     weight: "180g",
-    image: "/products/apple-oat-rounds.jpg",
+    image: "/dog1.png",
     shortDescription:
       "A simple, golden biscuit built on rolled oats and fresh apple. The one we reach for first.",
     longDescription:
@@ -37,7 +37,7 @@ export const products = [
     category: "dogs",
     price: 12.00,
     weight: "200g",
-    image: "/products/pbb-bites.jpg",
+    image: "/dog2.png",
     shortDescription:
       "Natural peanut butter and ripe banana, mixed into a chewy oat bite. The one that disappears first.",
     longDescription:
@@ -59,7 +59,7 @@ export const products = [
     category: "dogs",
     price: 10.00,
     weight: "180g",
-    image: "/products/pumpkin-cinnamon-cookies.jpg",
+    image: "/dog3.png",
     shortDescription:
       "Gentle on the stomach, easy on everything. Pumpkin, oats, a hint of cinnamon. Made for the dogs who need something soft.",
     longDescription:
@@ -85,7 +85,7 @@ export const products = [
     category: "cats",
     price: 11.00,
     weight: "80g",
-    image: "/products/salmon-catnip-crisps.jpg",
+    image: "/cats.png",
     shortDescription:
       "A small oat-flour crisp built around wild salmon, slow-dehydrated until it's pure flavour, with a hit of dried catnip.",
     longDescription:
@@ -111,7 +111,7 @@ export const products = [
     category: "mixed",
     price: 9.00,
     weight: "120g",
-    image: "/products/sweet-potato-chews.jpg",
+    image: "/dog1.png",
     shortDescription:
       "Just sweet potato. Sliced thin, dehydrated for hours, until what's left is sweetness and chew.",
     longDescription:
@@ -131,7 +131,7 @@ export const products = [
     category: "horses",
     price: 14.00,
     weight: "400g",
-    image: "/products/carrot-molasses-bites.jpg",
+    image: "/horse.png",
     shortDescription:
       "Oats, fresh carrot, and a swirl of molasses. Made bigger, for the bigger appetites at the gate.",
     longDescription:
