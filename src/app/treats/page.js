@@ -16,7 +16,7 @@ export default function TreatsPage() {
 
   return (
     <main className="treats-page">
-      {/* ─── Hero ─── */}
+      {/* Hero */}
       <section className="treats-hero">
         <div className="treats-hero-inner">
           <p className="treats-eyebrow">The Menu</p>
@@ -30,7 +30,7 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Category stamps ─── */}
+      {/* Category stamps */}
       <section className="treats-stamps-row">
         <div className="treats-stamps-inner">
           <div className="treats-stamp">
@@ -48,16 +48,17 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Disclosure band ─── */}
+      {/* Disclosure band */}
       <section className="treats-disclosure-band">
         <p>
           <em>
-            Details, ingredients, and pricing to follow as we near launch.
+            Finalized recipes closer to launch. Available for pickup at our
+            farm stand in Meadowvale, Nova Scotia.
           </em>
         </p>
       </section>
 
-      {/* ─── Dogs ─── */}
+      {/* Dogs */}
       <section className="treats-section">
         <div className="section-intro">
           <p className="section-phrase">
@@ -71,7 +72,7 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Cats ─── */}
+      {/* Cats */}
       <section className="treats-section">
         <div className="section-intro">
           <p className="section-phrase">
@@ -85,7 +86,7 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Mixed ─── */}
+      {/* Mixed */}
       <section className="treats-section">
         <div className="section-intro">
           <p className="section-phrase">
@@ -99,11 +100,11 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Horses ─── */}
+      {/* Horses */}
       <section className="treats-section">
         <div className="section-intro">
           <p className="section-phrase">
-            <em>For whoever's leaning over the fence.</em>
+            <em>For whoever is leaning over the fence.</em>
           </p>
         </div>
         <div className="product-grid product-grid--single">
@@ -113,7 +114,7 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Sage banner (committee) ─── */}
+      {/* Sage banner */}
       <section className="treats-sage-banner">
         <div className="treats-sage-inner">
           <p className="treats-sage-quote">
@@ -127,16 +128,10 @@ export default function TreatsPage() {
           </p>
         </div>
       </section>
-
-      {/* ─── Footnote echo ─── */}
-      <section className="treats-footnote">
-        <p>Real ingredients. Spoiled regulars.</p>
-      </section>
     </main>
   );
 }
 
-/* ─── Product card ─── */
 function ProductCard({ product }) {
   return (
     <Link href={`/treats/${product.slug}`} className="product-card">
