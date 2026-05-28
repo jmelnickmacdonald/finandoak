@@ -5,7 +5,7 @@ import { products } from "../products";
 export const metadata = {
   title: "Treats — Fin & Oak Bark Bakery",
   description:
-    "A small line of handmade treats for dogs, cats, and horses. Baked in small batches in Meadowvale, Nova Scotia.",
+    "Small-batch treats for dogs, cats, and horses, baked by hand in Meadowvale, Nova Scotia.",
 };
 
 export default function TreatsPage() {
@@ -21,26 +21,47 @@ export default function TreatsPage() {
         <div className="treats-hero-inner">
           <p className="treats-eyebrow">The Menu</p>
           <h1 className="treats-headline">
-            A small line, <em>baked thoughtfully.</em>
+            Real ingredients. <em>Spoiled regulars.</em>
           </h1>
           <p className="treats-lead">
-            Six recipes to start. Made by hand in small batches, from
-            real ingredients, in our home kitchen at Raven House.
-          </p>
-          <p className="treats-disclosure">
-            A preview menu. Final recipes, prices, and packaging
-            confirmed closer to our July 2026 launch.
+            Small-batch treats for dogs, cats, and a few of the larger
+            residents. Made by hand in our kitchen at Raven House.
           </p>
         </div>
       </section>
 
+      {/* ─── Category stamps ─── */}
+      <section className="treats-stamps-row">
+        <div className="treats-stamps-inner">
+          <div className="treats-stamp">
+            <img src="/dogstamp.png" alt="" className="treats-stamp-img" />
+            <p className="treats-stamp-label">For Dogs</p>
+          </div>
+          <div className="treats-stamp">
+            <img src="/catstamp.png" alt="" className="treats-stamp-img" />
+            <p className="treats-stamp-label">For Cats</p>
+          </div>
+          <div className="treats-stamp">
+            <img src="/horsestamp.png" alt="" className="treats-stamp-img" />
+            <p className="treats-stamp-label">For Horses</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Disclosure band ─── */}
+      <section className="treats-disclosure-band">
+        <p>
+          <em>
+            Details, ingredients, and pricing to follow as we near launch.
+          </em>
+        </p>
+      </section>
+
       {/* ─── Dogs ─── */}
       <section className="treats-section">
-        <div className="section-header">
-          <p className="section-eyebrow">I</p>
-          <h2 className="section-title">The Dog Menu</h2>
-          <p className="section-sub">
-            Three to start. A seasonal fourth coming in fall.
+        <div className="section-intro">
+          <p className="section-phrase">
+            <em>Three to start, and a fourth in the fall.</em>
           </p>
         </div>
         <div className="product-grid">
@@ -52,11 +73,9 @@ export default function TreatsPage() {
 
       {/* ─── Cats ─── */}
       <section className="treats-section">
-        <div className="section-header">
-          <p className="section-eyebrow">II</p>
-          <h2 className="section-title">The Cat Menu</h2>
-          <p className="section-sub">
-            One recipe. Tested by six in-house critics.
+        <div className="section-intro">
+          <p className="section-phrase">
+            <em>One recipe, six in-house critics.</em>
           </p>
         </div>
         <div className="product-grid product-grid--single">
@@ -68,12 +87,9 @@ export default function TreatsPage() {
 
       {/* ─── Mixed ─── */}
       <section className="treats-section">
-        <div className="section-header">
-          <p className="section-eyebrow">III</p>
-          <h2 className="section-title">For Both</h2>
-          <p className="section-sub">
-            Single-ingredient. Allergy-friendly. Suits everyone in the
-            house.
+        <div className="section-intro">
+          <p className="section-phrase">
+            <em>One ingredient. For dogs and cats both.</em>
           </p>
         </div>
         <div className="product-grid product-grid--single">
@@ -85,11 +101,9 @@ export default function TreatsPage() {
 
       {/* ─── Horses ─── */}
       <section className="treats-section">
-        <div className="section-header">
-          <p className="section-eyebrow">IV</p>
-          <h2 className="section-title">The Barn Crowd</h2>
-          <p className="section-sub">
-            For horses, ponies, donkeys. Anyone leaning over the fence.
+        <div className="section-intro">
+          <p className="section-phrase">
+            <em>For whoever's leaning over the fence.</em>
           </p>
         </div>
         <div className="product-grid product-grid--single">
@@ -99,7 +113,22 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Footer note ─── */}
+      {/* ─── Sage banner (committee) ─── */}
+      <section className="treats-sage-banner">
+        <div className="treats-sage-inner">
+          <p className="treats-sage-quote">
+            <em>
+              Recipes built carefully and thoughtfully. Tested by an
+              extensive committee of in-house critics.
+            </em>
+          </p>
+          <p className="treats-sage-sub">
+            Three dogs, six cats, several chickens with strong opinions.
+          </p>
+        </div>
+      </section>
+
+      {/* ─── Footnote echo ─── */}
       <section className="treats-footnote">
         <p>Real ingredients. Spoiled regulars.</p>
       </section>
