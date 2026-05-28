@@ -34,12 +34,11 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Stamp divider ─── */}
-      <StampDivider numeral="I" label="The Dog Menu" />
-
       {/* ─── Dogs ─── */}
       <section className="treats-section">
         <div className="section-header">
+          <p className="section-eyebrow">I</p>
+          <h2 className="section-title">The Dog Menu</h2>
           <p className="section-sub">
             Three to start. A seasonal fourth coming in fall.
           </p>
@@ -51,12 +50,11 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Stamp divider ─── */}
-      <StampDivider numeral="II" label="The Cat Menu" />
-
       {/* ─── Cats ─── */}
       <section className="treats-section">
         <div className="section-header">
+          <p className="section-eyebrow">II</p>
+          <h2 className="section-title">The Cat Menu</h2>
           <p className="section-sub">
             One recipe. Tested by six in-house critics.
           </p>
@@ -68,12 +66,11 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Stamp divider ─── */}
-      <StampDivider numeral="III" label="For Both" />
-
       {/* ─── Mixed ─── */}
       <section className="treats-section">
         <div className="section-header">
+          <p className="section-eyebrow">III</p>
+          <h2 className="section-title">For Both</h2>
           <p className="section-sub">
             Single-ingredient. Allergy-friendly. Suits everyone in the
             house.
@@ -86,12 +83,11 @@ export default function TreatsPage() {
         </div>
       </section>
 
-      {/* ─── Stamp divider ─── */}
-      <StampDivider numeral="IV" label="The Barn Crowd" />
-
       {/* ─── Horses ─── */}
       <section className="treats-section">
         <div className="section-header">
+          <p className="section-eyebrow">IV</p>
+          <h2 className="section-title">The Barn Crowd</h2>
           <p className="section-sub">
             For horses, ponies, donkeys. Anyone leaning over the fence.
           </p>
@@ -108,55 +104,6 @@ export default function TreatsPage() {
         <p>Real ingredients. Spoiled regulars.</p>
       </section>
     </main>
-  );
-}
-
-/* ─── Wax stamp section divider ─── */
-function StampDivider({ numeral, label }) {
-  return (
-    <div className="stamp-divider" aria-hidden="false">
-      <div className="stamp-divider-line" />
-      <div className="stamp-mark">
-        <svg
-          viewBox="0 0 80 80"
-          xmlns="http://www.w3.org/2000/svg"
-          className="stamp-svg"
-        >
-          <circle
-            cx="40"
-            cy="40"
-            r="36"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
-            opacity="0.5"
-          />
-          <circle
-            cx="40"
-            cy="40"
-            r="32"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="0.5"
-            opacity="0.4"
-            strokeDasharray="2 3"
-          />
-          <text
-            x="40"
-            y="48"
-            textAnchor="middle"
-            fontFamily="'Playfair Display', serif"
-            fontSize="22"
-            fontStyle="italic"
-            fill="currentColor"
-          >
-            {numeral}
-          </text>
-        </svg>
-      </div>
-      <div className="stamp-divider-label">{label}</div>
-      <div className="stamp-divider-line" />
-    </div>
   );
 }
 
